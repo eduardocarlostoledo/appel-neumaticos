@@ -1,0 +1,93 @@
+.brands-section {
+    padding: 4rem 0;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  
+  .brands-section h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+  }
+  
+  .brands-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 0 20px;
+    
+    justify-items: center; /* Alinear horizontalmente */
+  }
+  
+  .brand-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centrar contenido verticalmente */
+    text-align: center; /* Centrar texto */
+  }
+  
+  .brand-logo {
+    width: 100%;
+    height: auto;
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  
+  .brand-name {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 0.5rem;
+  }
+  
+  .guarantee {
+    margin-top: 3rem;
+    background: #e30613; /* Rojo corporativo */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .guarantee h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .guarantee p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .brands-grid {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1rem;
+    }
+  
+    .brand-logo {
+      max-width: 80px;
+    }
+  
+    .brand-name {
+      font-size: 0.9rem;
+    }
+  
+    .guarantee {
+      padding: 1rem;
+    }
+  
+    .guarantee h3 {
+      font-size: 1.2rem;
+    }
+  
+    .guarantee p {
+      font-size: 0.9rem;
+    }
+  }

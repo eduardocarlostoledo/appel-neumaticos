@@ -1,9 +1,9 @@
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1551489186-cf8726f514f8') center/cover;
+                url("../../images/baner.png") center/cover;
     color: var(--light);
-    padding: 6rem 0;
+    padding: 15rem 0;
     text-align: center;
   }
   

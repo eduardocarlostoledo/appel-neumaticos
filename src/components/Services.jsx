@@ -1,30 +1,26 @@
 import "./styles/Services.css";
+
+// Importar imágenes dinámicamente con Vite
+const images = import.meta.glob("../images/prod*.jpg", { eager: true });
+
 const Services = () => {
-    return (
-      <section className="services" id="productos">
-        <div className="container">
-          <h2>Nuestros Productos</h2>
-          <div className="grid">
-            <div className="card">
-              <h3>🚗 Neumáticos para Autos</h3>
-              <p>Marcas premium y económicas</p>
+  return (
+    <section className="services" id="productos">
+      <div className="container">
+        <h2>Nuestros Productos</h2>
+        <div className="grid">
+          {/* Mostrar las imágenes */}
+          {Object.values(images).map((image, index) => (
+            <div className="card" key={index}>
+              <img src={image.default} alt={`Producto ${index + 1}`} />
+              {/* <h3>Producto {index + 1}</h3> */}
+              {/* <p>Cubiertas Autos y Moto {index + 1}</p> */}
             </div>
-            <div className="card">
-              <h3>🚚 Para Camionetas</h3>
-              <p>Todo terreno y ciudad</p>
-            </div>
-            <div className="card">
-              <h3>🏍️ Para Motos</h3>
-              <p>Alto rendimiento</p>
-            </div>
-            <div className="card">
-              <h3>🔋 Baterías</h3>
-              <p>Diferentes marcas y amperajes</p>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
-    );
-  };
-  
-  export default Services;
+      </div>
+    </section>
+  );
+};
+
+export default Services;

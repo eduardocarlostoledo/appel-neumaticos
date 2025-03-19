@@ -1,17 +1,53 @@
 /* Ubicación */
 .location {
     padding: 4rem 0;
+    background-color: white;
+    color: black;
+    text-align: center;
   }
   
   .map-container {
+
     height: 400px;
     margin: 2rem 0;
     border-radius: 10px;
     overflow: hidden;
   }
-  
   .address {
     text-align: center;
     margin-top: 2rem;
     font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    transform: translateY(-3px);
+  }
+  
+  .social-links svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .social-links svg {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  @media (max-width: 768px) {
+    .social-links svg {
+      width: 24px;
+      height: 24px;
+    }
   }
