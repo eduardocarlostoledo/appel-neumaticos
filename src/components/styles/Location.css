@@ -1,0 +1,17 @@
+/* Ubicación */
+.location {
+    padding: 4rem 0;
+  }
+  
+  .map-container {
+    height: 400px;
+    margin: 2rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .address {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }

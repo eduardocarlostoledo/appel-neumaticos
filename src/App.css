@@ -1,0 +1,22 @@
+/* App.css */
+:root {
+  --primary: #E30613; /* Rojo corporativo */
+  --dark: #1a1a1a;
+  --light: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

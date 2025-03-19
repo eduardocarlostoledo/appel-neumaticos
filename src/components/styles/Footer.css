@@ -1,0 +1,25 @@
+/* Footer */
+.footer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0.5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }

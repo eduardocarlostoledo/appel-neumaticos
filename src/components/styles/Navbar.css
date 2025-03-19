@@ -1,0 +1,31 @@
+/* Navbar */
+.navbar {
+    background: var(--dark);
+    color: var(--light);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .nav-items {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-items a {
+    color: var(--light);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .nav-items a:hover {
+    color: var(--primary);
+  }
