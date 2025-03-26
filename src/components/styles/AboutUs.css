@@ -1,0 +1,41 @@
+.about-section {
+    background: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+  }
+  
+  .about-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    background: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    color: #e30613;
+  }
+  

@@ -1,7 +1,7 @@
 import "./styles/Hero.css";
 const Hero = () => {
     return (
-      <section className="hero">
+      <section className="hero" id="inicio">
         <div className="container-hero">
           {/* <h1>Sólo Calidad!</h1> */}
           {/* <p className="subtitle">Venta • Cambio • Asesoramiento</p> */}

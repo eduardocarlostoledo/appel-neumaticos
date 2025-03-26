@@ -1,94 +1,136 @@
-/* Navbar Styles */
 .navbar {
-    background: #1a1a1a; /* Fondo oscuro */
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.company-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #e30613;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #e30613;
+}
+
+.navbar-menu li a:hover::after {
+  width: 100%;
+}
+
+.navbar-contact .contact-link {
+  background: #e30613;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.navbar-contact .contact-link:hover {
+  background: #b8040f;
+}
+
+/* Menu Icon */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #222;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
   .navbar-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 0.8rem 1rem;
   }
-  
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .logo {
-    font-size: 2rem;
-  }
-  
-  .company-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #e7dedf; /* Rojo corporativo */
-  }
-  
+}
+
+@media (max-width: 768px) {
   .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .navbar-menu.show {
     display: flex;
-    list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
   }
-  
-  .navbar-menu li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: color 0.3s;
+
+  .navbar-menu li {
+    margin: 0.8rem 0;
+    text-align: center;
   }
-  
-  .navbar-menu li a:hover {
-    color: #e30613; /* Rojo corporativo */
-  }
-  
+
   .navbar-contact {
-    display: flex;
-    align-items: center;
+    display: none;
   }
-  
-  .contact-link {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s;
+
+  .menu-toggle {
+    display: block;
   }
-  
-  .contact-link:hover {
-    color: #e30613; /* Rojo corporativo */
+}
+
+@media (max-width: 400px) {
+  .company-name {
+    font-size: 0.95rem;
   }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .navbar-container {
-      flex-direction: column;
-      gap: 1rem;
-    }
-  
-    .navbar-menu {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-    }
-  
-    .navbar-contact {
-      margin-top: 1rem;
-    }
+
+  .logo {
+    font-size: 1.6rem;
   }
+}

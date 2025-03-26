@@ -39,7 +39,7 @@ const BrandsSection = () => {
   };
 
   return (
-    <section className="brands-section">
+    <section className="brands-section" id="marcas">
       <div className="container">
         <h2>NUESTRAS MARCAS</h2>
         <motion.div
@@ -62,16 +62,7 @@ const BrandsSection = () => {
             </motion.div>
           ))}
         </motion.div>
-        <motion.div
-          className="guarantee"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          viewport={{ once: true }}
-        >
-          <h3>GARANTÍA DE 5 AÑOS</h3>
-          <p>Contra defectos de fabricación</p>
-        </motion.div>
+        
       </div>
     </section>
   );

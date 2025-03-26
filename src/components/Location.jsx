@@ -1,7 +1,7 @@
 import "./styles/Location.css";
 const Location = () => {
     return (
-      <section className="location" id="ubicacion">
+      <section className="location" id="sucursales">
         <div className="container-map">
           <h2>¿Dónde Estamos?</h2>
           <div className="google-map">

@@ -4,6 +4,9 @@ import Services from './components/Services';
 import Location from './components/Location';
 import Footer from './components/Footer';
 import BrandsSection from './components/BrandsSection';
+import VehiculosCards from './components/VehiculosCards';
+import AboutUs from './components/AboutUs';
+import { motion } from 'framer-motion';
 import './App.css';
 
 
@@ -11,9 +14,13 @@ const App = () => {
   return (
     <>
       <Navbar />
-      <Hero />
+      
+      <VehiculosCards/>
       <BrandsSection/>
       <Services />
+      
+      <AboutUs/>
+      <Hero />
       <Location />
       <Footer />
     </>
