@@ -5,6 +5,10 @@ import "./styles/Navbar.css";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const handleLinkClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -16,12 +20,12 @@ const Navbar = () => {
 
         {/* Menu */}
         <ul className={`navbar-menu ${menuOpen ? "show" : ""}`}>
-        <li><a href="#">Inicio</a></li>
-          {/* <li><a href="#neumaticos">Neumáticos</a></li> */}
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#marcas">Marcas</a></li>
-          <li><a href="#sucursales">Sucursales</a></li>
-          <li><a href="#acerca-de">Acerca de</a></li>
+          <li><a href="#" onClick={handleLinkClick}>Inicio</a></li>
+          {/* <li><a href="#neumaticos" onClick={handleLinkClick}>Neumáticos</a></li> */}
+          <li><a href="#productos" onClick={handleLinkClick}>Productos</a></li>
+          <li><a href="#marcas" onClick={handleLinkClick}>Marcas</a></li>
+          <li><a href="#sucursales" onClick={handleLinkClick}>Sucursales</a></li>
+          <li><a href="#acerca-de" onClick={handleLinkClick}>Acerca de</a></li>
         </ul>
 
         {/* Contacto */}

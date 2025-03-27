@@ -11,7 +11,8 @@
 }
 
 .brands-grid {
-  display: grid;
+  display: flex;
+  align-items: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
   padding: 0 20px;
@@ -69,6 +70,8 @@
 /* Responsive iPad y laptops */
 @media (max-width: 1024px) {
   .brands-grid {
+    display: grid;
+    align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1.5rem;
   }
@@ -101,6 +104,8 @@
   }
 
   .brands-grid {
+    align-items: center;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 1rem;
     padding: 0 10px;
@@ -134,6 +139,13 @@
 
 /* Extra small devices (330px tipo Android chiquito) */
 @media (max-width: 350px) {
+
+  .brands-grid {
+    display: block;
+    align-items: center;
+  }
+
+
   .brands-section {
     padding: 3rem 0;
   }
