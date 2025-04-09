@@ -1,3 +1,25 @@
+/* Estilos para el logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-image {
+  height: 50px;
+  width: 50px; /* Mismo valor que height para hacerlo cuadrado antes de redondear */
+  border-radius: 50%; /* Esto hace que la imagen sea redonda */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  border: 2px solid #fff; /* Opcional: borde blanco */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra suave */
+  transition: all 0.3s ease; /* Suaviza las transiciones */
+}
+
+.logo-image:hover {
+  transform: scale(1.05); /* Efecto de zoom al hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hover */
+}
+
 .navbar {
   width: 100%;
   background: white;

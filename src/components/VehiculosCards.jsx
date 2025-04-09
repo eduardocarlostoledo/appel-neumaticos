@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import "./styles/VehiculosCards.css";
 
 // Importar imágenes
@@ -33,7 +34,31 @@ const CarsSelection = () => {
   };
 
   return (
+    
     <section className="slider-section" id="neumaticos">
+
+<Helmet>
+        <title>Appel Neumáticos Showroom | Inicio</title>
+        <meta 
+          name="description" 
+          content="Venta de neumáticos y cubiertas pirelli michelin bridgestone dunlop firestone durable xbri en encarnacion paraguay" 
+        />
+        <link rel="canonical" href="https://www.appelneumaticos.com/" />
+         {/* OpenGraph / Facebook */}
+  <meta property="og:title" content="Appel Neumáticos Showroom" />
+  <meta property="og:description" content="Las mejores marcas de neumáticos en Paraguay" />
+  <meta property="og:url" content="https://www.appelneumaticos.com/" />
+  <meta property="og:type" content="website" />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Appel Neumáticos Showroom" />
+  <meta name="twitter:description" content="Venta de neumáticos en Encarnación" />
+  
+      </Helmet>
+
+
+
       <div className="slider-container">
         <AnimatePresence mode="wait">
           <motion.div
@@ -46,7 +71,7 @@ const CarsSelection = () => {
           >
             <img
               src={cars[current].image}
-              alt={`Slide ${current}`}
+              alt={`Neumatico Cubierta Appel neumatico showroom  ${current}`}
               className="slider-image"
             />
             <div className="slider-content">

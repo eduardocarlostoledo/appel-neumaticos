@@ -14,7 +14,7 @@ const AboutUs = () => {
           Acerca de Nosotros
         </motion.h2>
 
-        <motion.p
+        <motion.h1
           className="about-text"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -23,7 +23,7 @@ const AboutUs = () => {
           En <strong>APPEL NEUMÁTICOS</strong>, somos líderes en la venta y distribución de neumáticos de alta calidad.
           Desde nuestros inicios, nos comprometimos a brindar a nuestros clientes productos confiables y un servicio
           profesional. Nuestra pasión por la seguridad y el rendimiento en el camino nos impulsa a ofrecer siempre lo mejor.
-        </motion.p>
+        </motion.h1>
 
         <motion.div
           className="about-stats"

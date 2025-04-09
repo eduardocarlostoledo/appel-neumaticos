@@ -1,3 +1,5 @@
+import { HelmetProvider } from 'react-helmet-async';
+
 import Navbar from './components/NavBar';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -12,6 +14,7 @@ import './App.css';
 
 const App = () => {
   return (
+    <HelmetProvider>
     <>
       <Navbar />
       
@@ -24,6 +27,7 @@ const App = () => {
       <Location />
       <Footer />
     </>
+    </HelmetProvider>
   );
 };
 

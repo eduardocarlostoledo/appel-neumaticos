@@ -13,13 +13,13 @@ import xbriLogo from "../images/logos/xbri.png";
 const BrandsSection = () => {
   // Lista de marcas con logos importados
   const brands = [
-    { name: "Bridgestone", logo: bridgestoneLogo },
-    { name: "Dunlop", logo: dunlopLogo },
-    { name: "Firestone", logo: firestoneLogo },
-    { name: "Durable", logo: durableLogo },
-    { name: "Michelin", logo: michelinLogo },
-    { name: "Pirelli", logo: pirelliLogo },
-    { name: "Xbri", logo: xbriLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Bridgestone", logo: bridgestoneLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Dunlop", logo: dunlopLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Firestone", logo: firestoneLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Durable", logo: durableLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Michelin", logo: michelinLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Pirelli", logo: pirelliLogo },
+    { name: "Neumatico Cubierta Appel neumatico showroom Xbri", logo: xbriLogo },
   ];
 
   // Animaciones

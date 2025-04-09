@@ -12,7 +12,7 @@ const Services = () => {
           {/* Mostrar las imágenes */}
           {Object.values(images).map((image, index) => (
             <div className="card" key={index}>
-              <img src={image.default} alt={`Producto ${index + 1}`} />
+              <img src={image.default} alt={`Neumatico Cubierta Appel neumatico showroom  ${index + 1}`} />
               {/* <h3>Producto {index + 1}</h3> */}
               {/* <p>Cubiertas Autos y Moto {index + 1}</p> */}
             </div>

@@ -14,7 +14,13 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Brand */}
         <div className="navbar-brand">
-          <span className="logo">🛞</span>
+        <a className="logo" href="/">
+    <img 
+      src="src/images/logo.png" 
+      alt="Toledo Consultora IT Neumatico Cubierta Appel neumatico showroom " 
+      className="logo-image"
+    />
+  </a>
           <h1 className="company-name">APPEL NEUMÁTICOS</h1>
         </div>
 
