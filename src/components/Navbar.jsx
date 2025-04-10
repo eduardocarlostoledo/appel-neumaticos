@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import "./styles/Navbar.css";
-
+import "../../src/styles/Navbar.css";
+import logo from '../images/logo.png'; // Asegúrate de que la ruta es correcta
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -15,8 +15,8 @@ const Navbar = () => {
         {/* Brand */}
         <div className="navbar-brand">
         <a className="logo" href="/">
-    <img 
-      src="src/images/logo.png" 
+    <img loading="lazy"
+      src={logo}
       alt="Toledo Consultora IT Neumatico Cubierta Appel neumatico showroom " 
       className="logo-image"
     />

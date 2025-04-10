@@ -1,4 +1,4 @@
-import "./styles/Location.css";
+import "../../src/styles/Location.css";
 const Location = () => {
     return (
       <section className="location" id="sucursales">

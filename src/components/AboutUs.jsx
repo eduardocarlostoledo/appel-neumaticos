@@ -1,8 +1,15 @@
 import { motion } from "framer-motion";
-import "./styles/AboutUs.css";
+import { Helmet } from 'react-helmet';
+import "../../src/styles/AboutUs.css";
 
 const AboutUs = () => {
   return (
+    <>
+      <Helmet>
+        <title>Sobre Nosotros | Appel Neumáticos</title>
+        <meta name="description" content="Conoce nuestra historia y compromiso con la venta de neumáticos en Paraguay" />
+      </Helmet>
+      
     <section id="acerca-de" className="about-section">
       <div className="about-container">
         <motion.h2
@@ -38,11 +45,13 @@ const AboutUs = () => {
             🏆 15 años de experiencia
           </div>
           <div className="stat-item">
-            🌎 Cobertura nacional
+            🌎 Cobertura nacional e internacional
           </div>
         </motion.div>
       </div>
     </section>
+    {/* Contenido */}
+    </>
   );
 };
 

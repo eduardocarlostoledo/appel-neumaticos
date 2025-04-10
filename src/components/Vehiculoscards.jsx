@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet-async';
-import "./styles/VehiculosCards.css";
+import { Helmet } from 'react-helmet';  // <- Cambia esto
+import "../../src/styles/VehiculosCards.css";
 
 // Importar imágenes
 import moto from "../images/cars/r1.jpg";

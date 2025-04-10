@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./styles/BrandsSection.css";
+import "../../src/styles/BrandsSection.css";
 
 // Importar logos de las marcas
 import bridgestoneLogo from "../images/logos/bridgestone.jpg";
@@ -57,7 +57,7 @@ const BrandsSection = () => {
               whileHover={{ scale: 1.05 }} // Efecto hover
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <img src={brand.logo} alt={brand.name} className="brand-logo" />
+              <img loading="lazy"src={brand.logo} alt={brand.name} className="brand-logo" />
               {/* <p className="brand-name">{brand.name}</p> */}
             </motion.div>
           ))}

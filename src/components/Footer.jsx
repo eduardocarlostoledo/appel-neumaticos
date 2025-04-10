@@ -4,7 +4,7 @@ import {VehicleTypeSection} from "../../src/components/maxSeo/VehicleTypeSection
 import {BrandShowcase} from "../../src/components/maxSeo/BrandShowcase";
 import {LocalSeoSection} from "../../src/components/maxSeo/LocalSeoSection";
 import {PricingSection} from "../../src/components/maxSeo/PricingSection";
-import "./styles/Footer.css";
+import "../../src/styles/Footer.css";
 
   // Footer component
   // This component is responsible for rendering the footer of the website.

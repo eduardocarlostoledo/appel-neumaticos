@@ -1,0 +1,29 @@
+.brands {
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .brand-item {
+    flex: 0 0 calc(14.28% - 1.5rem); /* 7 marcas por fila */
+    max-width: 120px;
+  }
+  
+  .brand-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(0%); /* Opcional: color al hover */
+    transition: filter 0.3s;
+  }
+  
+  .brand-item:hover img {
+    filter: grayscale(0%);
+  }

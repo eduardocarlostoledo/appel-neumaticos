@@ -1,0 +1,23 @@
+
+  /* VehicleTypeSection */
+  .vehicle-types {
+    padding: 2rem 0;
+  }
+  
+  .vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .vehicle-card {
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .vehicle-card:hover {
+    transform: translateY(-5px);
+  }
