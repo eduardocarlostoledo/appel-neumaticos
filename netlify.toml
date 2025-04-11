@@ -1,4 +1,4 @@
 [build]
   command = "CI= npm install --legacy-peer-deps && npm run build"
   publish = "build"
-  environment = { NODE_VERSION = "16" } # Usa la versión que necesites
+  environment = { NODE_VERSION = "20.17" } # Usa la versión que necesites
