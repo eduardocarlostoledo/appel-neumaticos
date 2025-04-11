@@ -17,9 +17,24 @@ const Footer = () => {
     return (
       <footer className="footer">
         <div className="container">
-          <p>© 2024 Appel Neumaticos - Todos los derechos reservados</p>
-          <a href="https://wa.me/595975123030" >📞 https://wa.me/595975123030 </a>
-          <p>📧 info@appelneumaticos.com</p>
+  <p>© 2024 Appel Neumaticos - Todos los derechos reservados</p>
+  <div className="contact-info">
+    <a 
+      href="https://wa.me/595975123030" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="whatsapp-link"
+    >
+      <img 
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        alt="Contactar por WhatsApp" 
+        width="24" 
+        height="24"
+      />
+    </a>
+    <p>📧 info@appelneumaticos.com</p>
+  </div>
+
           
     <BrandBanner />
     <VehicleTypeSection />

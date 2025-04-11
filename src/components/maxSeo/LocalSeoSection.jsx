@@ -24,7 +24,7 @@ export const LocalSeoSection = () => (
     >
       <iframe
         title="Ubicación de Appel Neumáticos en Encarnación"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.123456789012!2d-55.12345678901234!3d-27.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDA3JzI0LjUiUyA1NcKwMDcnMjQuNSJX!5e0!3m2!1sen!2spy!4v1234567890123!5m2!1sen!2spy"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d885.8912351549054!2d-55.851786724189196!3d-27.35806680361256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDIxJzI5LjAiUyA1NcKwNTEnMDIuMSJX!5e0!3m2!1ses!2sar!4v1742416736106!5m2!1ses!2sar"
         width="100%"
         height="450"
         style={{ border: 0 }}
