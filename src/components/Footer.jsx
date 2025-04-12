@@ -17,7 +17,7 @@ const Footer = () => {
     return (
       <footer className="footer">
         <div className="container">
-  <p>© 2024 Appel Neumaticos - Todos los derechos reservados</p>
+  <p>© 2024 Appel Neumaticos Showroom - Todos los derechos reservados</p>
   <div className="contact-info">
     <a 
       href="https://wa.me/595975123030" 

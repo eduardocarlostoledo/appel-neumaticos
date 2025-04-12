@@ -6,7 +6,7 @@ export const VehicleTypeSection = () => {
     {
       name: "Autos",
       image: "/autos.jpg",
-      alt: "Neumáticos para autos sedán y compactos en Encarnación",
+      alt: "Neumáticos y cubiertas para auto, moto y pickup en Encarnación",
       description: "Desde city cars hasta berlinas de lujo"
     },
     // Agregar camionetas, motos, etc.

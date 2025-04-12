@@ -9,8 +9,8 @@ export const BrandBanner = () => (
     itemType="https://schema.org/AutoPartsStore"
   >
     {/* Título principal con ubicación */}
-    <h1 itemProp="name">Appel Neumáticos - Distribuidor Autorizado en <span itemProp="addressLocality">Encarnación</span></h1>
-    
+    <h1 itemProp="name">Appel Neumáticos - Comprar Cubiertas para auto moto camioneta en  <span itemProp="addressLocality">Encarnación</span></h1>
+    <h2>Venta de Cubiertas para auto moto camioneta en Encarnacion</h2>
     {/* Descripción con servicios y área de cobertura */}
     <p itemProp="description">
       <strong>Venta de neumáticos Pirelli, Michelin y Bridgestone</strong>. 
