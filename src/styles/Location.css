@@ -1,53 +1,59 @@
-/* Ubicación */
 .location {
-    padding: 4rem 0;
-    background-color: white;
-    color: black;
-    text-align: center;
-  }
-  
-  .map-container {
+  padding: 4rem 1rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
 
-    
-    margin: 2rem 0;
-    border-radius: 10px;
-    overflow: hidden;
+.container-map {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.container-map h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.google-map iframe {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 400px;
+  margin-bottom: 2rem;
+}
+
+.address {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+.address p {
+  margin: 0.3rem 0;
+}
+
+@media (max-width: 600px) {
+  .container-map h2 {
+    font-size: 2rem;
   }
-  .address {
-    text-align: center;
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
+
   .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
-  
-  .social-links a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-links a:hover {
-    transform: translateY(-3px);
-  }
-  
-  .social-links svg {
-    width: 32px;
-    height: 32px;
-  }
-
-  .social-links svg {
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  }
-
-  @media (max-width: 768px) {
-    .social-links svg {
-      width: 24px;
-      height: 24px;
-    }
-  }
+}

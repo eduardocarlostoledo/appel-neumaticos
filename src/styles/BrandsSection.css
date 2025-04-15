@@ -4,6 +4,11 @@
   text-align: center;
 }
 
+.brands-description{
+  color: black;
+  margin: 20px;
+}
+
 .brands-section h2 {
   font-size: 2rem;
   color: #1a1a1a;

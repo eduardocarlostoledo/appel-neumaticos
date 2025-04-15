@@ -38,9 +38,12 @@ const Location = () => {
   </div>
 
   {/* Dirección */}
+  <address>
   <p>📍 J4RX+PQ9 Encarnación, Paraguay</p>
   <p>Rotonda Ruta Internacional - 300mt de la aduana internacional</p>
   <p>🚚 Enviamos a todo Paraguay y Argentina</p>
+</address>
+
 </div>
         </div>
       </section>

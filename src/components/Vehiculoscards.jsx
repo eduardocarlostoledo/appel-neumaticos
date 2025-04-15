@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Helmet } from 'react-helmet';  // <- Cambia esto
+import { Helmet } from "react-helmet"; // <- Cambia esto
 import "../../src/styles/VehiculosCards.css";
 
 // Importar imágenes
@@ -10,9 +10,21 @@ import supra from "../images/cars/supra.webp";
 
 const CarsSelection = () => {
   const cars = [
-    { image: moto, title: "Neumáticos para Motos", desc: "Pura potencia y estilo" },
-    { image: hilux, title: "Neumáticos para Camionetas", desc: "Seguridad y resistencia" },
-    { image: supra, title: "Neumáticos para Autos", desc: "Velocidad y diseño" },
+    {
+      image: moto,
+      title: "Neumáticos para Motos",
+      desc: "Pura potencia y estilo",
+    },
+    {
+      image: hilux,
+      title: "Neumáticos para Camionetas",
+      desc: "Seguridad y resistencia",
+    },
+    {
+      image: supra,
+      title: "Neumáticos para Autos",
+      desc: "Velocidad y diseño",
+    },
   ];
 
   const [current, setCurrent] = useState(0);
@@ -34,30 +46,34 @@ const CarsSelection = () => {
   };
 
   return (
-    
     <section className="slider-section" id="neumaticos">
-
-<Helmet>
+          <h1 className='h1-principal'> 
+    Neumáticos y Cubiertas para Autos, Motos y Camionetas en Encarnación | Appel Neumáticos Showroom Encarnación Paraguay
+    </h1>
+      <Helmet>
         <title>Appel Neumáticos Showroom | Inicio</title>
-        <meta 
-          name="description" 
-          content="Venta de neumáticos y cubiertas pirelli michelin bridgestone dunlop firestone durable xbri en encarnacion paraguay" 
+        <meta
+          name="description"
+          content="Venta de neumáticos y cubiertas pirelli michelin bridgestone dunlop firestone durable xbri en encarnacion paraguay"
         />
         <link rel="canonical" href="https://www.appelneumaticos.com/" />
-         {/* OpenGraph / Facebook */}
-  <meta property="og:title" content="Appel Neumáticos Showroom" />
-  <meta property="og:description" content="Las mejores marcas de neumáticos en Paraguay" />
-  <meta property="og:url" content="https://www.appelneumaticos.com/" />
-  <meta property="og:type" content="website" />
-  
-  {/* Twitter */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Appel Neumáticos Showroom" />
-  <meta name="twitter:description" content="Venta de neumáticos en Encarnación" />
-  
+        {/* OpenGraph / Facebook */}
+        <meta property="og:title" content="Appel Neumáticos Showroom" />
+        <meta
+          property="og:description"
+          content="Las mejores marcas de neumáticos en Paraguay"
+        />
+        <meta property="og:url" content="https://www.appelneumaticos.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Appel Neumáticos Showroom" />
+        <meta
+          name="twitter:description"
+          content="Venta de neumáticos en Encarnación"
+        />
       </Helmet>
-
-
 
       <div className="slider-container">
         <AnimatePresence mode="wait">

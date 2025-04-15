@@ -1,3 +1,16 @@
+.h1-principal {
+  text-align: center;
+  font-size: small;
+}
+
+@media screen and (max-width: 765px) {
+  .h1-principal {
+   display: none;
+    
+  }
+  
+}
+
 .slider-section {
   width: 100%;
   height: 80vh;
