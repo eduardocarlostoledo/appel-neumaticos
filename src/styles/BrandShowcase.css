@@ -4,9 +4,13 @@
   }
   
   .brand-logos {
+    background-color: white;
+    
+    border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 1.5rem;
     margin-top: 1rem;
   }

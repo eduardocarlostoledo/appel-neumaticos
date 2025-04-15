@@ -22,7 +22,8 @@
 
 .navbar {
   width: 100%;
-  background: white;
+  background:#165BAC;
+  color: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -51,7 +52,7 @@
 .company-name {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #222;
+  
 }
 
 .navbar-menu {
@@ -62,7 +63,7 @@
 
 .navbar-menu li a {
   text-decoration: none;
-  color: #333;
+  
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -73,14 +74,14 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background: #e30613;
+  background: white;
   left: 0;
   bottom: -4px;
   transition: width 0.3s ease;
 }
 
 .navbar-menu li a:hover {
-  color: #e30613;
+  color: #c8bed1;
 }
 
 .navbar-menu li a:hover::after {
@@ -88,7 +89,7 @@
 }
 
 .navbar-contact .contact-link {
-  background: #e30613;
+  background: #202f5f;
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -98,7 +99,7 @@
 }
 
 .navbar-contact .contact-link:hover {
-  background: #b8040f;
+  background: #0bbcf1;
 }
 
 /* Menu Icon */
@@ -159,3 +160,11 @@
     font-size: 1.6rem;
   }
 }
+
+
+@media (max-width: 911px) {
+  .contact-link .navbar-contact{
+    display: none;
+  }
+}
+  

@@ -5,6 +5,7 @@ import {BrandShowcase} from "../../src/components/maxSeo/BrandShowcase";
 import {LocalSeoSection} from "../../src/components/maxSeo/LocalSeoSection";
 import {PricingSection} from "../../src/components/maxSeo/PricingSection";
 import "../../src/styles/Footer.css";
+import { Link } from "react-router-dom";
 
   // Footer component
   // This component is responsible for rendering the footer of the website.
@@ -45,6 +46,16 @@ const Footer = () => {
 
 
         </div>
+
+        <div className="footer-links">
+
+<Link to="/autos/cubiertas"> Cubiertas para Autos </Link>
+<Link to="/motos/cubiertas"> Cubiertas para Motos </Link>
+<Link to="/camioneta-pickup/cubiertas">Cubiertas para Camionetas</Link>
+
+</div>
+
+
       </footer>
     );
   };

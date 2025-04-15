@@ -4,11 +4,11 @@
     text-align: center;
   }
   .whatsapp-link {
-    color: #25D366; /* Verde de WhatsApp */
+    color:white; /* Verde de WhatsApp */
     font-weight: bold;
   }
   .email-link {
-    color: #D44638; /* Rojo de Gmail */
+    color:white; /* Rojo de Gmail */
   }
   .contact-info {
     margin: 1rem 0;
