@@ -2,12 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import "../styles/AccesoriosCard.css";
 
+import frente from "../images/frente.jpg"
+
+
 const AccesoriosCard = () => {
   return (
     <motion.section
       className="accesorios-card"
       style={{
-        backgroundImage: 'url("/src/images/frente.jpg")',
+        backgroundImage: frente,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
