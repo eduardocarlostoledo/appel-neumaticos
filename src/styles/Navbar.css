@@ -1,39 +1,16 @@
-/* Estilos para el logo */
-.logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
-.logo-image {
-  height: 50px;
-  width: 50px; /* Mismo valor que height para hacerlo cuadrado antes de redondear */
-  border-radius: 50%; /* Esto hace que la imagen sea redonda */
-  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
-  border: 2px solid #fff; /* Opcional: borde blanco */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra suave */
-  transition: all 0.3s ease; /* Suaviza las transiciones */
-}
-
-.logo-image:hover {
-  transform: scale(1.05); /* Efecto de zoom al hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hover */
-}
-
 .navbar {
-  width: 100%;
-  background:#165BAC;
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: #00205b; */
+  padding: 0.8rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 0.8rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,129 +19,81 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
-.logo {
-  font-size: 2rem;
+.logo-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
 }
 
 .company-name {
-  font-size: 1.1rem;
-  font-weight: 600;
-  
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
 }
 
 .navbar-menu {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar-menu li a {
+.navbar-menu a {
+  color: #ffffff;
+  font-size: 1rem;
   text-decoration: none;
-  
   font-weight: 500;
-  position: relative;
   transition: color 0.3s ease;
 }
 
-.navbar-menu li a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: white;
-  left: 0;
-  bottom: -4px;
-  transition: width 0.3s ease;
-}
-
-.navbar-menu li a:hover {
-  color: #c8bed1;
-}
-
-.navbar-menu li a:hover::after {
-  width: 100%;
+.navbar-menu a:hover {
+  color: #ffcb05;
 }
 
 .navbar-contact .contact-link {
-  background: #202f5f;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
+  background-color: #1d2e7b;
+  color: #fff;
   font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
   transition: background 0.3s ease;
 }
 
 .navbar-contact .contact-link:hover {
-  background: #0bbcf1;
+  background-color: #ffcb05;
+  color: #00205b;
 }
 
-/* Menu Icon */
 .menu-toggle {
   display: none;
-  font-size: 1.8rem;
   cursor: pointer;
-  color: #222;
+  font-size: 1.4rem;
+  color: white;
 }
 
-/* Mobile Responsive */
 @media (max-width: 1024px) {
-  .navbar-container {
-    padding: 0.8rem 1rem;
-  }
-}
-
-@media (max-width: 768px) {
   .navbar-menu {
     display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
     flex-direction: column;
-    background: white;
+    background-color: #00205b;
+    position: absolute;
+    top: 100%;
+    right: 0;
     width: 100%;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
   }
 
   .navbar-menu.show {
     display: flex;
   }
 
-  .navbar-menu li {
-    margin: 0.8rem 0;
-    text-align: center;
-  }
-
-  .navbar-contact {
-    display: none;
-  }
-
   .menu-toggle {
     display: block;
   }
 }
-
-@media (max-width: 400px) {
-  .brands-grid {
-    display: block;
-  }
-  .company-name {
-    font-size: 0.95rem;
-  }
-
-  .logo {
-    font-size: 1.6rem;
-  }
-}
-
-
-@media (max-width: 911px) {
-  .contact-link .navbar-contact{
-    display: none;
-  }
-}
-  

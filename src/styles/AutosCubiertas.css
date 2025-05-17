@@ -1,0 +1,81 @@
+.autos-cubiertas {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #ffffff;
+  color: #0d1b2a;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.autos-cubiertas h1 {
+  font-size: 2.4rem;
+  color: #00205b;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.autos-cubiertas h2 {
+  font-size: 1.6rem;
+  color: #00205b;
+  margin-top: 2rem;
+  border-left: 5px solid #ffcb05;
+  padding-left: 0.75rem;
+}
+
+.autos-cubiertas p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.autos-cubiertas ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.autos-cubiertas li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.autos-cubiertas strong {
+  color: #00205b;
+  font-weight: 600;
+}
+
+/* Call-to-action badge style (opcional) */
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  font-size: 0.85rem;
+  background-color: #ffcb05;
+  color: #00205b;
+  font-weight: 700;
+  border-radius: 30px;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .autos-cubiertas {
+    padding: 1rem;
+  }
+
+  .autos-cubiertas h1 {
+    font-size: 1.8rem;
+  }
+
+  .autos-cubiertas h2 {
+    font-size: 1.3rem;
+  }
+
+  .autos-cubiertas p,
+  .autos-cubiertas li {
+    font-size: 0.95rem;
+  }
+}

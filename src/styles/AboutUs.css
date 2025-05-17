@@ -1,5 +1,5 @@
 .about-section {
-  background: #f9f9f9;
+  /* background: #f9f9f9; */
   padding: 4rem 2rem;
   text-align: center;
 }
@@ -11,14 +11,14 @@
 }
 
 .about-title {
-  font-size: 2.2rem;
-  color: #222;
+  font-size: 3.2rem;
+  color: white;
   margin-bottom: 1.5rem;
 }
 
 .about-text {
-  color: #555;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1.7rem;
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 2.5rem;
@@ -47,7 +47,7 @@
 
 .about-cta {
   font-size: 1.1rem;
-  color: #333;
+  color: white;
   max-width: 700px;
   margin: 0 auto;
 }

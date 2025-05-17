@@ -1,0 +1,15 @@
+# robots.txt para Netlify - generado por Toledo Consultora IT
+
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /404
+Disallow: /server-error
+
+# Permite todo lo demás
+Allow: /
+
+# Sitemap general (ajustá dominio si usás .ar o subdominio)
+Sitemap: https://appelneumaticos.com/sitemap.xml

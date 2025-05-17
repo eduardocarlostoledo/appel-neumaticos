@@ -1,8 +1,7 @@
-.location {
-  /* background-color: #f9f9f9; */
+.sucursales {
+  background-color: #f9f9f9;
   padding: 2rem 1rem;
   border-top: 1px solid #ddd;
-  color: white;
 }
 
 .container-map {
@@ -22,12 +21,12 @@ h2, h3 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.address {
+.address-sucursales {
   margin-top: 1rem;
   font-size: 1rem;
 }
 
-.address p {
+.address-sucursales p {
   margin: 0.5rem 0;
 }
 
@@ -102,10 +101,9 @@ h2, h3 {
 }
 
 
-.location {
+.sucursales {
   padding: 4rem 1rem;
-  /* background-color: #f7f7f7; */
-  color: white;
+  background-color: #f7f7f7;
   text-align: center;
 }
 
@@ -128,7 +126,7 @@ h2, h3 {
   margin-bottom: 2rem;
 }
 
-.address {
+.address-sucursales {
   font-size: 1.1rem;
   color: white;
   text-align: center;
@@ -149,7 +147,8 @@ h2, h3 {
   transform: scale(1.2);
 }
 
-.address p {
+.address-sucursales p {
+    color: rgb(255, 255, 255);
   margin: 0.3rem 0;
 }
 

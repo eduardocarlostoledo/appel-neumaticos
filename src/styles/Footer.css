@@ -1,20 +1,78 @@
-/* Footer */
-
-.container {
-  background:#165BAC;
-  color: white;
+.footer {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+              url("../images/bgruta.jpg") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: #f5f5f5;
+  padding: 3rem 0;
   text-align: center;
-  padding: 20px;
-  
-  border-top: 1px solid #ddd;
+}
+
+.container-footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.container-footer p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #e2e2e2;
 }
 
 .contact-info {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 15px;
-  margin-top: 10px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.footer-column {
+  text-align: left;
+  min-width: 180px;
+}
+
+.footer-column h4 {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+  border-bottom: 2px solid #38ae3f;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.footer-column a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
 .whatsapp-link img {
@@ -25,28 +83,17 @@
   transform: scale(1.1);
 }
 
+@media (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-.footer {
-    background: var(--dark);
-    color: var(--light);
-    padding: 2rem 0;
+  .footer-column {
     text-align: center;
   }
-  
-  .footer p {
-    margin: 0.5rem 0;
+
+  .contact-info {
+    justify-content: center;
   }
-  
-  @media (max-width: 768px) {
-    .nav-items {
-      display: none;
-    }
-    
-    .hero h1 {
-      font-size: 2rem;
-    }
-    
-    .grid {
-      grid-template-columns: 1fr;
-    }
-  }
+}

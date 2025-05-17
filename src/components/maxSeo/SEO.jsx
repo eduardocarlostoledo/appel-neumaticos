@@ -1,5 +1,6 @@
-import "../../styles/SEO.css"; // Asegúrate de que la ruta sea correcta
-import { Helmet } from 'react-helmet-async';
+import "../../styles/SEO.css";
+import { Helmet } from 'react-helmet';
+
 
 const SEO = ({ 
   title = "Appel Neumáticos | Venta en Encarnación",
@@ -16,7 +17,7 @@ const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonicalUrl} />
-      
+
       {/* OpenGraph */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -26,13 +27,13 @@ const SEO = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="es_PY" />
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twitterImage} />
-      
+
       {/* Schema.org */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -47,3 +48,5 @@ const SEO = ({
     </Helmet>
   );
 };
+
+export default SEO;

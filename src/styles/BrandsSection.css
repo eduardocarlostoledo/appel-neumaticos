@@ -1,8 +1,18 @@
+.container-marcas {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-radius: 15px;
+}
+
 .brands-section {
+   max-width: 1500px;
+  margin: 2rem auto; /* unifica margen vertical y centra horizontal */
+  border-radius: 15px;
   padding: 4rem 0;
-  background:#165BAC;
+  /* background: #165BAC; */
   color: white;
-    text-align: center;
+  text-align: center;
 }
 
 .brands-description{
@@ -12,7 +22,7 @@
 
 .brands-section h2 {
   font-size: 2rem;
-  background:#165BAC;
+  /* background:#165BAC; */
   color: white;
   margin-bottom: 2rem;
 }

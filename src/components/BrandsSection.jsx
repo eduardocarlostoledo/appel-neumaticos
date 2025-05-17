@@ -61,9 +61,9 @@ const BrandsSection = () => {
 
   return (
     <section className="brands-section" id="marcas">
-      <div className="container">
+      <div className="container-marcas">
         <h2>
-          Marcas de Neumáticos en Appel Showroom: Pirelli, Michelin, Bridgestone
+          En Appel Neumáticos Showroom tenemos las siguientes marcas Pirelli, Michelin, Bridgestone, Dunlop, Firestone, Durable, Xbri, Rinaldi, 
           y más
         </h2>
         <p className="brands-description">

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://appelneumaticos.com/</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://appelneumaticos.com/neumaticos</loc>
+        <lastmod>2025-04-14</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://appelneumaticos.com/neumaticos/michelin</loc>
+        <lastmod>2025-04-140</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://appelneumaticos.com/baterias/coche</loc>
+        <lastmod>2025-04-140</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+<url>
+  <loc>https://appelneumaticos.com/autos/cubiertas</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://appelneumaticos.com/motos/cubiertas</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://appelneumaticos.com/camioneta-pickup/cubiertas</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://appelneumaticos.com/servicios/balanceo</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://appelneumaticos.com/quienes-somos</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://appelneumaticos.com/contacto</loc>
+  <lastmod>2025-05-15</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.6</priority>
+</url>
+</urlset>
