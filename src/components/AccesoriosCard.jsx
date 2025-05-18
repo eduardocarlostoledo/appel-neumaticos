@@ -1,18 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/AccesoriosCard.css";
-//import frente from "../images/"
+import frente from "../images/frente.jpg";
+
 
 
 const AccesoriosCard = () => {
   return (
     <motion.section
       className="accesorios-card"
-      style={{
-        backgroundImage: 'url("/src/images/frente.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+     style={{
+  backgroundImage: `url(${frente})`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+}}
+
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
