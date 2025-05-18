@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "../styles/AccesoriosCard.css";
-
-import frente from "../images/frente.jpg"
+//import frente from "../images/"
 
 
 const AccesoriosCard = () => {
@@ -10,7 +9,7 @@ const AccesoriosCard = () => {
     <motion.section
       className="accesorios-card"
       style={{
-        backgroundImage: frente,
+        backgroundImage: 'url("/src/images/frente.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
