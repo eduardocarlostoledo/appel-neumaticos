@@ -21,6 +21,7 @@ a {
 a:hover {
   color: #d8d9e7;
 }
+
 body {
   margin: 0;
   min-width: 320px;
@@ -29,9 +30,9 @@ body {
   place-items: center;
   font-family: 'Segoe UI', sans-serif;
 
-  background: 
-    radial-gradient(circle at top left, rgba(21, 101, 192, 0.3), transparent 50%),
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background:
+    radial-gradient(circle at top left, rgba(21, 101, 192, 0.2), transparent 50%),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
     url("../images/root.jpg") no-repeat center center;
 
   background-size: cover;
