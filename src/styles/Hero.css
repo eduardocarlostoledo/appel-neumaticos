@@ -87,13 +87,13 @@
 @media (max-width: 350px) {
 
   .hero {
-  max-width: 83%;
+  /* max-width: 83%; */
 margin:0;
 
 }
 
 .container-hero {
-  max-width: 73%;
+  /* max-width: 73%; */
 margin:0 auto;
 
 }

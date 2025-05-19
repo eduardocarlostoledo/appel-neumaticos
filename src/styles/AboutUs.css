@@ -55,13 +55,13 @@
 @media (max-width: 350px) {
 
   .about-section {
-  max-width: 83%;
+  /* max-width: 83%; */
 margin:0;
 
 }
 
 .about-container {
-  max-width: 73%;
+  /* max-width: 73%; */
 margin:0;
 
 }

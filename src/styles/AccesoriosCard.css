@@ -44,7 +44,7 @@
 }
 
 .cta-accesorios {
-  margin: 10px;
+  /* margin: 10px; */
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border: 2px solid #fff;
@@ -107,7 +107,7 @@ max-width: 320px;
 @media (max-width: 480px) {
   .accesorios-overlay {
     flex-direction: column;
-    padding: 1rem;
+    /* padding: 1rem; */
     text-align: left;
   }
 
@@ -206,7 +206,7 @@ max-width: 320px;
 
 .accesorios-overlay{
   
-  max-width: 75%;
+  max-width: 100%;
 }
 
 .accesorios-text{

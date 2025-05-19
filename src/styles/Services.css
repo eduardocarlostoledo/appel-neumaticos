@@ -1,4 +1,6 @@
 .container-services {
+  display: grid;
+  place-items: center;
    max-width: 1500px;
   margin: 2rem auto; /* unifica margen vertical y centra horizontal */
   border-radius: 15px;
@@ -163,7 +165,7 @@
 @media (max-width: 350px) {
 
   .container-services {
-  max-width: 83%;
+  /* max-width: 83%; */
 margin:0;
 
 }

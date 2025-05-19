@@ -223,7 +223,7 @@
 
   .slider-container,
   .slider-container-enhanced {
-    max-width: 84%;
+    /* max-width: 84%; */
     height: 380px;
     border-radius: 12px;
   }

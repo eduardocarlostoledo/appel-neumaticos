@@ -169,13 +169,13 @@ h2, h3 {
 
 
   .location {
-  max-width: 83%;
+  /* max-width: 83%; */
 margin:0;
 
 }
 
 .container-map {
-  max-width: 73%;
+  /* max-width: 73%; */
 margin:0;
 
 }
@@ -184,18 +184,18 @@ margin:0;
     font-size: 2rem;
   }
 
-.google-map{
+/* .google-map{
   max-width: 90%;
-}
+} */
 
 .address p h3 {
   max-width: 290px;
   margin:0;
 }
 
-.social-links{
+/* .social-links{
   width: 90%;;
-}
+} */
 
 .hero h1 {
   text-align: center;
