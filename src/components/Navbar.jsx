@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="navbar">
 
       <section class="layout">
-        
+
   <div class="grow1">
 
     <a className="logo" href="/">
@@ -58,16 +58,16 @@ const Navbar = () => {
           <li><Link to="/marcas-appel-neumaticos-showroom" onClick={handleLinkClick}>Marcas</Link></li>
                     <li><Link to="/sucursales" onClick={handleLinkClick}>Sucursales</Link></li>
                     <li><Link to="/quienes-somos" onClick={handleLinkClick}>Acerca</Link></li>        
-          
+          <li> <a href="tel:+595984679739" className="contact-link">
+            📞 +595 984 679739
+          </a></li>
           
           
           
         </ul>
 
         <div className="navbar-contact">
-          <a href="tel:+595984679739" className="contact-link">
-            📞 +595 984 679739
-          </a>
+         
         </div>
 
          {/* Toggle */}
