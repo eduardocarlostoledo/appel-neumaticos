@@ -3,7 +3,7 @@ import { VehicleTypeSection } from "../../src/components/maxSeo/VehicleTypeSecti
 import { BrandShowcase } from "../../src/components/maxSeo/BrandShowcase";
 import { LocalSeoSection } from "../../src/components/maxSeo/LocalSeoSection";
 import { PricingSection } from "../../src/components/maxSeo/PricingSection";
-
+import "../../src/styles/SeoSections.css";
 const SeoSections = () => {
   return (
     <section className="seo-sections">

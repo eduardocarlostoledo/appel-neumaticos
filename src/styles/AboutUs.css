@@ -51,3 +51,22 @@
   max-width: 700px;
   margin: 0 auto;
 }
+
+@media (max-width: 350px) {
+
+  .about-section {
+  max-width: 83%;
+margin:0;
+
+}
+
+.about-container {
+  max-width: 73%;
+margin:0;
+
+}
+
+.about-title{
+  font-size: xx-large;
+}
+}

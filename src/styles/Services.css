@@ -159,3 +159,12 @@
 .btn-yellow:hover {
   background-color: #50a12b;
 }
+
+@media (max-width: 350px) {
+
+  .container-services {
+  max-width: 83%;
+margin:0;
+
+}
+}

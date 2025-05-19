@@ -157,12 +157,23 @@
 /* Extra small devices (330px tipo Android chiquito) */
 @media (max-width: 350px) {
 
+  .container-marcas{
+    width: 80%;
+    margin: 0;
+  padding: 0;
+  border-radius: 15px;
+  }
+
   .brands-grid {
+    margin: 50px;
+    gap: 0.5rem;
     display: block;
     align-items: center;
   }
 
-
+.brand-card{
+  margin: 10px;
+}
   .brands-section {
     padding: 3rem 0;
   }

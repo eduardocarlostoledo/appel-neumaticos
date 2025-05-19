@@ -213,3 +213,123 @@
   background: #38ae3f;
   opacity: 1;
 }
+
+/* ✅ iPhone pequeños (SE, 5, 6, 7, 8) */
+@media (max-width: 480px) {
+  .slider-section {
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .slider-container,
+  .slider-container-enhanced {
+    height: 380px;
+    border-radius: 12px;
+  }
+
+  .slider-content {
+    bottom: 10%;
+    left: 6%;
+  }
+
+  .slider-content h2,
+  .slider-overlay-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .slider-content p,
+  .slider-overlay-content p {
+    font-size: 0.9rem;
+  }
+
+  .slider-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .arrow {
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* ✅ iPhone grande y tablet vertical (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .slider-container,
+  .slider-container-enhanced {
+    height: 480px;
+  }
+
+  .slider-content h2,
+  .slider-overlay-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .slider-content p,
+  .slider-overlay-content p {
+    font-size: 1rem;
+  }
+
+  .slider-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* ✅ Tablet horizontal (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .slider-container,
+  .slider-container-enhanced {
+    height: 520px;
+  }
+
+  .slider-content h2,
+  .slider-overlay-content h2 {
+    font-size: 2rem;
+  }
+
+  .slider-content p,
+  .slider-overlay-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* ✅ MacBook (1025px – 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .slider-container,
+  .slider-container-enhanced {
+    height: 580px;
+  }
+
+  .slider-content h2,
+  .slider-overlay-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .slider-content p,
+  .slider-overlay-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* ✅ Ultra HD o pantallas grandes */
+@media (min-width: 1441px) {
+  .slider-container,
+  .slider-container-enhanced {
+    height: 700px;
+  }
+
+  .slider-content h2,
+  .slider-overlay-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .slider-content p,
+  .slider-overlay-content p {
+    font-size: 1.3rem;
+  }
+}

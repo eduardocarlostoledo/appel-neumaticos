@@ -32,7 +32,8 @@ body {
 
   background:
     radial-gradient(circle at top left, rgba(21, 101, 192, 0.2), transparent 50%),
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    
+    linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3)),
     url("../images/root.jpg") no-repeat center center;
 
   background-size: cover;
@@ -81,3 +82,5 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+

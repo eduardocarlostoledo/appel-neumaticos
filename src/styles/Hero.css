@@ -82,3 +82,23 @@
   background-color: #e30613;
   color: white;
 }
+
+
+@media (max-width: 350px) {
+
+  .hero {
+  max-width: 83%;
+margin:0;
+
+}
+
+.container-hero {
+  max-width: 73%;
+margin:0 auto;
+
+}
+
+.hero-text{
+  font-size: xx-large;
+}
+}

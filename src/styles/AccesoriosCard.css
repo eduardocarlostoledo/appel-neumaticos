@@ -9,7 +9,7 @@
 }
 
 .accesorios-overlay {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.3));
   display: flex;
@@ -67,11 +67,12 @@
 
 @media (max-width: 320px) {
   .accesorios-card {
-    min-height: auto;
+max-width: 320px;
     border-radius: 12px;
   }
 
   .accesorios-overlay {
+    width: 90%;
     flex-direction: column;
     padding: 1rem;
     gap: 1rem;
@@ -99,6 +100,117 @@
   }
 
   .accesorios-text {
-    max-width: 100%;
+    max-width: 90%;
   }
+}
+/* 📱 iPhone / smartphones (hasta 480px) */
+@media (max-width: 480px) {
+  .accesorios-overlay {
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .accesorios-text h2 {
+    font-size: 1rem;
+  }
+
+  .accesorios-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .accesorios-text p {
+    font-size: 0.95rem;
+  }
+
+  .cta-accesorios {
+    width: 90%;
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+}
+
+/* 📱 iPhone SE y 320px ya lo tenés cubierto arriba, se hereda */
+
+/* 📲 Tablets (iPad vertical/horizontal, 768px–1024px) */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .accesorios-card {
+    min-height: 500px;
+  }
+
+  .accesorios-overlay {
+    flex-direction: row;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .accesorios-text {
+    max-width: 90%;
+  }
+
+  .accesorios-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .accesorios-text h3 {
+    font-size: 1.7rem;
+  }
+
+  .accesorios-text p {
+    font-size: 1rem;
+  }
+
+  .cta-accesorios {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+/* 💻 MacBook / escritorio HD (1025px–1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .accesorios-card {
+    min-height: 500px;
+  }
+
+  .accesorios-overlay {
+    padding: 2.5rem 3rem;
+  }
+
+  .accesorios-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .accesorios-text h3 {
+    font-size: 1.9rem;
+  }
+
+  .accesorios-text p {
+    font-size: 1.05rem;
+  }
+
+  .cta-accesorios {
+    font-size: 1rem;
+    padding: 0.7rem 1.3rem;
+  }
+}
+
+@media (max-width: 450px) {
+
+
+  .accesorios-card {
+  max-width: 420px;
+  margin:0;
+  font-size: xx-large;
+
+}
+
+.accesorios-overlay{
+  
+  max-width: 420px;
+}
+
+.accesorios-text{
+  max-width: 420px;
+}
+
 }
