@@ -2,8 +2,15 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import productData from "../data/productData.js";
 import "../styles/ProductDetail-michelin.css";
+import { useEffect } from "react";
 
 const ProductDetail = () => {
+
+    useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  
   const { id } = useParams();
 
   const product = productData.find((p) => p.id === id);
