@@ -1,0 +1,100 @@
+Política de Divulgación Responsable de Vulnerabilidades
+=========================================================
+Appel Neumáticos Showroom — https://appelneumaticos.com
+Desarrollado y mantenido por Toledo Consultora IT — https://www.toledoconsultora.com
+Última actualización: 2026-03-26
+
+
+1. ALCANCE
+----------
+Esta política aplica a todos los sistemas, aplicaciones y servicios digitales
+operados bajo el dominio appelneumaticos.com y sus subdominios.
+
+
+2. CÓMO REPORTAR UNA VULNERABILIDAD
+--------------------------------------
+Si descubrís una vulnerabilidad de seguridad en nuestro sitio, te pedimos que
+la reportes de forma responsable antes de divulgarla públicamente.
+
+Canales habilitados:
+
+  Email (propietario del sitio):
+    info@appelneumaticos.com
+
+  Responsable técnico (Toledo Consultora IT):
+    https://www.toledoconsultora.com/contacto
+
+Incluí en tu reporte:
+  - URL o componente afectado
+  - Descripción clara de la vulnerabilidad y su clasificación (XSS, CSRF, etc.)
+  - Pasos exactos para reproducirla
+  - Impacto potencial estimado
+  - Navegador, sistema operativo y versión utilizados
+  - Capturas de pantalla o prueba de concepto (PoC) si las tuvieras
+
+No es necesario incluir datos personales de usuarios reales para demostrar el hallazgo.
+
+
+3. LO QUE PODÉS ESPERAR DE NOSOTROS
+--------------------------------------
+  - Acuse de recibo:    dentro de 5 días hábiles
+  - Evaluación inicial: dentro de 10 días hábiles
+  - Resolución:         según criticidad del hallazgo (ver tabla abajo)
+
+Tabla de tiempos de resolución por criticidad (CVSS v3):
+
+  Crítico  (CVSS 9.0-10.0)  ->  hasta 7 días corridos
+  Alto     (CVSS 7.0-8.9)   ->  hasta 15 días corridos
+  Medio    (CVSS 4.0-6.9)   ->  hasta 30 días corridos
+  Bajo     (CVSS 0.1-3.9)   ->  hasta 60 días corridos
+
+Te mantendremos informado sobre el estado de la corrección a lo largo del proceso.
+
+
+4. REGLAS DE DIVULGACIÓN RESPONSABLE
+--------------------------------------
+Al reportar una vulnerabilidad aceptás:
+
+  - No explotar la vulnerabilidad más allá de lo necesario para demostrarla.
+  - No acceder, modificar ni eliminar datos de usuarios.
+  - No realizar ataques de denegación de servicio (DoS/DDoS).
+  - No ejecutar ataques de ingeniería social contra nuestro equipo o clientes.
+  - No publicar el hallazgo públicamente hasta que hayamos liberado una corrección
+    o hasta que hayan transcurrido 90 días desde el reporte, lo que ocurra primero.
+
+Nos comprometemos a no iniciar acciones legales contra investigadores que actúen
+de buena fe y dentro de los términos de esta política.
+
+
+5. FUERA DE ALCANCE
+--------------------
+Los siguientes hallazgos no son elegibles para reconocimiento:
+
+  - Versiones desactualizadas de software de terceros sin prueba de explotación.
+  - Ausencia de headers de seguridad de bajo impacto (ej: X-Powered-By).
+  - Ataques que requieren acceso físico al dispositivo del usuario.
+  - Vulnerabilidades en servicios de terceros fuera de nuestro control
+    (WhatsApp, Google Maps, redes sociales).
+  - Ataques de fuerza bruta sobre formularios de contacto.
+  - Resultados de escáneres automatizados sin análisis manual de impacto.
+
+
+6. RECONOCIMIENTOS
+-------------------
+Agradecemos públicamente a los investigadores que reporten vulnerabilidades
+válidas de forma responsable. Si querés ser mencionado, indicalo en tu reporte
+junto al nombre o alias que prefieras usar.
+
+
+7. RESPONSABLE TÉCNICO
+------------------------
+El desarrollo, mantenimiento y seguridad del sitio appelneumaticos.com está
+a cargo de:
+
+  Toledo Consultora IT
+  Sitio web:  https://www.toledoconsultora.com
+  Contacto:   https://www.toledoconsultora.com/contacto
+
+Esta política está disponible en formato legible por máquina en:
+  https://appelneumaticos.com/.well-known/security.txt
+  (Estándar RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116)

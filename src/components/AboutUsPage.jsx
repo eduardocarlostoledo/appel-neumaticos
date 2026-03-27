@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import "../styles/AutosCubiertas.css";
+import RouteLanding from "./RouteLanding.jsx";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const AboutUsPage = () => {
   useEffect(() => {
@@ -10,48 +11,40 @@ const AboutUsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Quiénes Somos | Appel Neumáticos Showroom</title>
+        <title>Quienes Somos | Appel Neumáticos Showroom</title>
         <meta
           name="description"
-          content="Conocé la historia y valores de Appel Neumáticos Showroom en Encarnación, Paraguay. Comprometidos con la calidad y el servicio."
+          content="Appel Neumáticos Showroom en Encarnacion, Paraguay. Mas de 20.000 Neumáticos vendidos, 15 años de experiencia y cobertura nacional e internacional."
         />
       </Helmet>
 
-      <span className="badge">Alta Tecnología en Cubiertas</span>
-      <section className="autos-cubiertas">
-        <h1>Quiénes Somos</h1>
-        <p>
-          <strong>Appel Neumáticos Showroom</strong> es una empresa familiar ubicada
-          en Encarnación, Paraguay, dedicada a la venta de neumáticos de las
-          principales marcas como Pirelli, Michelin y Bridgestone. Estamos situados
-          a 300 metros de la aduana internacional, facilitando el acceso a nuestros
-          clientes locales y extranjeros.
-        </p>
-
-        <h2>Nuestra Misión</h2>
-        <p>
-          Brindar productos y servicios de alta calidad que garanticen la seguridad
-          y satisfacción de nuestros clientes, ofreciendo asesoramiento
-          personalizado y soluciones a medida.
-        </p>
-
-        <h2>Nuestros Valores</h2>
-        <ul>
-          <li><strong>Compromiso:</strong> Con la calidad y la satisfacción del cliente.</li>
-          <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia.</li>
-          <li><strong>Innovación:</strong> Buscamos constantemente mejorar nuestros servicios.</li>
-          <li><strong>Responsabilidad:</strong> Con nuestros clientes y la comunidad.</li>
-        </ul>
-
-        <p>
-          Con años de experiencia en el rubro, nos hemos consolidado como una opción
-          confiable para quienes buscan neumáticos y servicios de gomería en la región.{" "}
-          <strong>¡Te invitamos a conocernos y ser parte de nuestra comunidad!</strong>
-        </p>
-      </section>
+      <RouteLanding
+        badge="Quienes somos"
+        title="Appel Neumáticos Showroom en el circuito comercial de Encarnacion"
+        description="Somos lideres en venta y distribucion de Neumáticos de alta calidad. Trabajamos con una gran variedad de marcas y un enfoque fuerte en motos de alto rendimiento, alta cilindrada y enduro. El cierre de ventas se hace por WhatsApp."
+        points={[
+          "Rotonda ruta internacional",
+          "Paraguay y Argentina",
+          "WhatsApp directo",
+        ]}
+        metrics={[
+          { value: "+20.000", label: "Neumáticos vendidos" },
+          { value: "15 años", label: "de experiencia" },
+          { value: "Cobertura", label: "nacional e internacional" },
+        ]}
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage("quienes somos")),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Ver ubicacion",
+          href: "/#sucursales",
+        }}
+      />
     </>
   );
 };
-
 
 export default AboutUsPage;

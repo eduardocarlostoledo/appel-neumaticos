@@ -1,12 +1,13 @@
-import { BrandBanner } from "../../src/components/maxSeo/BrandBanner";
-import { VehicleTypeSection } from "../../src/components/maxSeo/VehicleTypeSection";
-import { BrandShowcase } from "../../src/components/maxSeo/BrandShowcase";
-import { LocalSeoSection } from "../../src/components/maxSeo/LocalSeoSection";
-import { PricingSection } from "../../src/components/maxSeo/PricingSection";
-import "../../src/styles/SeoSections.css";
+import { BrandBanner } from "./maxSeo/BrandBanner.jsx";
+import { VehicleTypeSection } from "./maxSeo/VehicleTypeSection.jsx";
+import { BrandShowcase } from "./maxSeo/BrandShowcase.jsx";
+import { LocalSeoSection } from "./maxSeo/LocalSeoSection.jsx";
+import { PricingSection } from "./maxSeo/PricingSection.jsx";
+import "../styles/SeoSections.css";
+
 const SeoSections = () => {
   return (
-    <section className="seo-sections">
+    <section className="seo-sections" aria-label="Secciones SEO y de consulta local">
       <BrandBanner />
       <VehicleTypeSection />
       <BrandShowcase />

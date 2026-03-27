@@ -1,44 +1,89 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import "../styles/AutosCubiertas.css";
+import RouteLanding from "./RouteLanding.jsx";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const Contact = () => {
-  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []); (
-    
-  <>
-    <Helmet>
-      <title>Contacto | Appel Neumáticos Showroom</title>
-      <meta name="description" content="Contactá con Appel Neumáticos Showroom en Encarnación, Paraguay. Estamos para ayudarte con tus consultas y necesidades." />
-    </Helmet>
+  }, []);
 
-<span className="badge">Alta Tecnología en Cubiertas</span>
-    <section className="autos-cubiertas">
-      <h1>Contacto</h1>
-      <p>
-        ¿Tenés consultas o necesitás asesoramiento? En <strong>Appel Neumáticos Showroom</strong> estamos para ayudarte.
-      </p>
+  return (
+    <>
+      <Helmet>
+        <title>Contacto | Appel Neumáticos Showroom</title>
+        <meta
+          name="description"
+          content="Contacta a Appel Neumáticos Showroom en Encarnacion. Consultas por WhatsApp para auto, moto y camioneta."
+        />
+      </Helmet>
 
-      <h2>Datos de Contacto</h2>
-      <ul>
-        <li><strong>Teléfono:</strong> <a href="tel:+595982706757">+595 982 706 757</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/595982706757" target="_blank" rel="noopener noreferrer">+595 982 706 757</a></li>
-        <li><strong>Dirección:</strong> Av. San Roque González c/ San José, Encarnación, Paraguay</li>
-        <li><strong>Horarios:</strong> Lunes a Sábado de 05:45 a 17:30, Domingo de 07:00 a 12:00</li>
-      </ul>
+      <RouteLanding
+        badge="Contacto"
+        title="WhatsApp directo para consultas y stock"
+        description="La forma mas rapida de comprar es por WhatsApp. Indicanos marca, medida y tipo de vehiculo y te respondemos con stock y opciones."
+        points={[
+          "WhatsApp principal",
+          "Ubicacion clara",
+          "Consulta rapida",
+        ]}
+        metrics={[
+          { value: "05:45-17:30", label: "lunes a sabado" },
+          { value: "Encarnacion", label: "Itapua, Paraguay" },
+          { value: "WhatsApp", label: "respuesta directa" },
+        ]}
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage("contacto general")),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Ver ubicacion",
+          href: "/#sucursales",
+        }}
+      >
+        <p style={{ marginTop: "1rem", color: "rgba(255,255,255,0.72)" }}>
+          Desarrollo web por{" "}
+          <a
+            href="https://www.toledoconsultora.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            www.toledoconsultora.com
+          </a>
+        </p>
 
-      <h2>Envíos a Todo el País</h2>
-      <p>
-        Realizamos envíos a todo Paraguay. Consultá por disponibilidad y costos según tu ubicación.
-      </p>
-
-      <p>
-        <strong>¡Esperamos tu contacto!</strong>
-      </p>
-    </section>
-  </>
-);
+        <div
+          className="hp-track cols-3"
+          style={{ marginTop: "0.5rem", paddingBottom: "0.25rem" }}
+        >
+          <article className="hp-card">
+            <div className="hp-card-body">
+              <h2 className="hp-card-title">Telefono</h2>
+              <p className="hp-card-copy">+595 982 706 757</p>
+            </div>
+          </article>
+          <article className="hp-card">
+            <div className="hp-card-body">
+              <h2 className="hp-card-title">WhatsApp</h2>
+              <p className="hp-card-copy">
+                Consultas desde Paraguay y Argentina.
+              </p>
+            </div>
+          </article>
+          <article className="hp-card">
+            <div className="hp-card-body">
+              <h2 className="hp-card-title">Direccion</h2>
+              <p className="hp-card-copy">
+                Rotonda Ruta Internacional, a 300 m de la aduana.
+              </p>
+            </div>
+          </article>
+        </div>
+      </RouteLanding>
+    </>
+  );
 };
+
 export default Contact;

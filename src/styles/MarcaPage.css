@@ -1,0 +1,275 @@
+.marca-page {
+  color: #e2e8f0;
+}
+
+/* ===== Hero ===== */
+.marca-hero {
+  padding: clamp(3rem, 6vw, 5rem) 1rem clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
+}
+
+.marca-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.marca-badge {
+  display: inline-block;
+  background: rgba(243, 177, 11, 0.1);
+  color: #f3b10b;
+  border: 1px solid rgba(243, 177, 11, 0.28);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.marca-title {
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: #f8fafc;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem 0;
+}
+
+.marca-title span {
+  color: #f3b10b;
+}
+
+.marca-subtitle {
+  font-size: 1.1rem;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.72;
+  max-width: 62ch;
+  margin: 0 auto 1.8rem;
+}
+
+.marca-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* ===== Buttons ===== */
+.marca-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.marca-btn:hover {
+  transform: translateY(-2px);
+}
+
+.marca-btn-wa {
+  background: linear-gradient(135deg, #25d366 0%, #1aad54 100%);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+}
+
+.marca-btn-wa:hover {
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.42);
+}
+
+.marca-btn-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+/* ===== Section ===== */
+.marca-section {
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+}
+
+.marca-section-alt {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.marca-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.marca-section-title {
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  font-weight: 900;
+  color: #f8fafc;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.75rem 0;
+}
+
+.marca-section-desc {
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 1rem;
+  line-height: 1.72;
+  margin: 0 0 1.75rem 0;
+  max-width: 65ch;
+}
+
+/* ===== Feature grid ===== */
+.marca-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.marca-feature {
+  padding: 1.4rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.marca-feature h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+}
+
+.marca-feature p {
+  color: rgba(226, 232, 240, 0.7);
+  line-height: 1.68;
+  font-size: 0.93rem;
+  margin: 0;
+}
+
+/* ===== Product lines ===== */
+.marca-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.marca-line {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.2rem 1.3rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.marca-line-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f3b10b;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.marca-line strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 0.97rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.marca-line p {
+  color: rgba(226, 232, 240, 0.65);
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ===== Use cases ===== */
+.marca-uses {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.marca-use {
+  padding: 1.1rem 1.3rem;
+  border-radius: 14px;
+  border-left: 3px solid #f3b10b;
+  background: rgba(243, 177, 11, 0.04);
+}
+
+.marca-use strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 0.97rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.marca-use p {
+  color: rgba(226, 232, 240, 0.68);
+  line-height: 1.62;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ===== CTA Final ===== */
+.marca-cta-final {
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 211, 102, 0.08), transparent 50%),
+    #07111f;
+  border-top: 1px solid rgba(37, 211, 102, 0.12);
+}
+
+.marca-cta-final-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.marca-cta-final-title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 900;
+  color: #f8fafc;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.5rem 0;
+}
+
+.marca-cta-final-text {
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.68;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 640px) {
+  .marca-features {
+    grid-template-columns: 1fr 1fr;
+  }
+  .marca-uses {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .marca-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .marca-cta-final-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}

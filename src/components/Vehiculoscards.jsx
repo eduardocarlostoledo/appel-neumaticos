@@ -1,76 +1,95 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import "../../src/styles/VehiculosCards.css";
+import { Link } from "react-router-dom";
+import "../styles/homepage.css";
 
 import moto from "../images/cars/r1.jpg";
 import hilux from "../images/cars/hilux.jpeg";
 import supra from "../images/cars/supra.webp";
 
 const CarsSelection = () => {
-  const cars = [
-    { image: moto, title: "Neumáticos para Motos", desc: "Pura potencia y estilo" },
-    { image: hilux, title: "Neumáticos para Camionetas", desc: "Seguridad y resistencia" },
-    { image: supra, title: "Neumáticos para Autos", desc: "Velocidad y diseño" }
+  const cards = [
+    {
+      image: moto,
+      title: "Cubiertas para motos",
+      desc: "Agarre y estabilidad para uso urbano, ruta y sport.",
+      to: "/motos/cubiertas",
+    },
+    {
+      image: hilux,
+      title: "Cubiertas para camionetas",
+      desc: "Mas resistencia para carga, trabajo y caminos mixtos.",
+      to: "/camioneta-pickup/cubiertas",
+    },
+    {
+      image: supra,
+      title: "Cubiertas para autos",
+      desc: "Confort y seguridad para ciudad y viaje.",
+      to: "/autos/cubiertas",
+    },
   ];
 
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => setCurrent((prev) => (prev + 1) % cars.length), 5000);
-    return () => clearInterval(interval);
-  }, [current]);
-
   return (
-    <section className="slider-section" id="neumaticos">
+    <section className="hp-section" id="Neumáticos">
       <Helmet>
         <title>Appel Neumáticos Showroom | Inicio</title>
-        <meta name="description" content="Neumáticos para motos, autos y camionetas en Encarnación - Appel Neumáticos Showroom." />
+        <meta
+          name="description"
+          content="Neumáticos para motos, autos y camionetas en Encarnacion, Paraguay."
+        />
         <link rel="canonical" href="https://www.appelneumaticos.com/" />
       </Helmet>
 
-      <div className="slider-container-enhanced">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={current}
-            className="slide-enhanced"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            style={{
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url(${cars[current].image})`
-            }}
-          >
-            <div className="slider-overlay-content">
-              <motion.h2 initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
-                {cars[current].title}
-              </motion.h2>
-              <motion.p initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
-                {cars[current].desc}
-              </motion.p>
-              <motion.a
-                className="slider-btn"
-                href="#productos"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Ver productos
-              </motion.a>
+      <motion.div
+        className="hp-shell"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="hp-inner">
+          <div className="hp-grid">
+            <div>
+              <span className="hp-badge">Elegi por tipo de vehiculo</span>
+              <h2 className="hp-title">Selecciona tu categoria</h2>
+              <p className="hp-text">
+                Si ya sabes que necesitas, entra directo a la categoria de tu
+                vehiculo y consulta por WhatsApp.
+              </p>
             </div>
-          </motion.div>
-        </AnimatePresence>
+          </div>
 
-        <div className="indicators">
-          {cars.map((_, index) => (
-            <span
-              key={index}
-              className={`dot ${index === current ? "active" : ""}`}
-              onClick={() => setCurrent(index)}
-            ></span>
-          ))}
+          <div
+            className="hp-track cols-3"
+            style={{ marginTop: "1.25rem", paddingBottom: "0.25rem" }}
+          >
+            {cards.map((card) => (
+              <article className="hp-card" key={card.title}>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "230px",
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
+                <div className="hp-card-body">
+                  <h3 className="hp-card-title">{card.title}</h3>
+                  <p className="hp-card-copy">{card.desc}</p>
+                  <div className="hp-cta-row" style={{ marginTop: "0.25rem" }}>
+                    <Link to={card.to} className="hp-btn hp-btn-primary">
+                      Ver categoria
+                    </Link>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

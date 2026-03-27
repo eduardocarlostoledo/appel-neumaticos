@@ -1,69 +1,79 @@
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import "../../src/styles/AboutUs.css";
+import "../styles/homepage.css";
 
 const AboutUs = () => {
   return (
-    <>
+    <section className="hp-section" id="acerca-de">
       <Helmet>
         <title>Sobre Nosotros | Appel Neumáticos Showroom</title>
         <meta
           name="description"
-          content="Conoce nuestra historia y compromiso con la venta de neumáticos en Encarnación, Paraguay. Más de 15 años de experiencia nos respaldan."
+          content="Appel Neumáticos Showroom en Encarnacion, Paraguay. Mas de 20.000 Neumáticos vendidos, 15 años de experiencia y cobertura nacional e internacional."
         />
       </Helmet>
 
-      <section
-        id="acerca-de"
-        className="about-section"
-        itemScope
-        itemType="http://schema.org/Organization"
+      <motion.div
+        className="hp-shell"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
       >
-        <div className="about-container">
-          <motion.h2
-            className="about-title"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            itemProp="name"
-          >
-            Appel Neumáticos
-          </motion.h2>
+        <div className="hp-inner">
+          <div className="hp-grid split">
+            <div>
+              <span className="hp-badge">Quienes somos</span>
+              <h2 className="hp-title">
+                Lideres en venta y distribucion de Neumáticos
+              </h2>
+              <p className="hp-text">
+                Appel Neumáticos Showroom trabaja con una variedad enorme para
+                auto, moto y camioneta. Somos especialistas en motos de alto
+                rendimiento, alta cilindrada y enduro. Atendemos Paraguay y
+                Argentina con consulta directa por WhatsApp.
+              </p>
 
-          <motion.p
-            className="about-text"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            itemProp="description"
-          >
-            En <strong>APPEL NEUMÁTICOS</strong>, somos líderes en la venta y
-            distribución de neumáticos de alta calidad. Desde nuestros inicios,
-            nos comprometimos a brindar a nuestros clientes de <strong>Encarnación</strong> y todo <strong>Paraguay</strong> productos confiables y un servicio profesional. Nuestra pasión por la seguridad y el rendimiento en el camino nos impulsa a ofrecer siempre lo mejor.
-          </motion.p>
+              <div className="hp-pills">
+                <span>+20.000 vendidos</span>
+                <span>15 años de experiencia</span>
+                <span>Cobertura nacional e internacional</span>
+              </div>
 
-          <motion.ul
-            className="about-stats"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
-            <li className="stat-item">🚗 +10,000 neumáticos vendidos</li>
-            <li className="stat-item">🏆 15 años de experiencia</li>
-            <li className="stat-item">🌎 Cobertura nacional e internacional</li>
-          </motion.ul>
+              <div className="hp-cta-row">
+                <a href="#sucursales" className="hp-btn hp-btn-primary">
+                  Ver ubicacion
+                </a>
+                <a href="#productos" className="hp-btn hp-btn-secondary">
+                  Ver catalogo
+                </a>
+              </div>
+            </div>
 
-          <motion.p
-            className="about-cta"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-          >
-            Conocé más visitando nuestro showroom en Encarnación o escribinos para recibir asesoramiento personalizado.
-          </motion.p>
+            <motion.div
+              className="hp-metrics"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              viewport={{ once: true }}
+            >
+              <div className="hp-metric">
+                <strong>Ubicacion</strong>
+                <span>rotonda ruta internacional</span>
+              </div>
+              <div className="hp-metric">
+                <strong>Marcas</strong>
+                <span>Pirelli, Michelin, Bridgestone y mas</span>
+              </div>
+              <div className="hp-metric">
+                <strong>WhatsApp</strong>
+                <span>consulta directa</span>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </section>
-    </>
+      </motion.div>
+    </section>
   );
 };
 

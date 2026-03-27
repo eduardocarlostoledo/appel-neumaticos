@@ -1,14 +1,7 @@
-/* App.css */
 :root {
-  --primary: #E30613; /* Rojo corporativo */
-  --dark: #1a1a1a;
+  --primary: #e30613;
+  --dark: #0b1220;
   --light: #ffffff;
-}
-
-
-
-body {
-  font-family: 'Arial', sans-serif;
 }
 
 .container-app {
@@ -16,4 +9,3 @@ body {
   margin: 0 auto;
   padding: 0 20px;
 }
-

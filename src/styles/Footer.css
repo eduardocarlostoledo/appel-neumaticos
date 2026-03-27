@@ -42,14 +42,14 @@
 .footer-links {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: 1.5rem 2.5rem;
   flex-wrap: wrap;
   margin-top: 1rem;
 }
 
 .footer-column {
   text-align: left;
-  min-width: 180px;
+  min-width: 150px;
 }
 
 .footer-column h4 {

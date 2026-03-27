@@ -1,91 +1,186 @@
-import "../../src/styles/Services.css";
-import React, { useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import "../../src/styles/Services.css";
 import productInfo from "../../src/data/productInfo";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
+
+const FILTERS = [
+  { id: "todos", label: "Todos" },
+  { id: "motos", label: "Motos" },
+  { id: "autos", label: "Autos" },
+  { id: "camionetas", label: "Camionetas" },
+  { id: "michelin", label: "Michelin" },
+  { id: "pirelli", label: "Pirelli" },
+];
+
+const MOTO_BRANDS = ["PIRELLI", "MICHELIN", "RINALDI"];
+const CAMIONETA_TAGS = ["SUV", "Pickup", "Camioneta", "All-Terrain"];
+const AUTO_TAGS = ["Auto", "Auto Compacto", "Ciudad", "Performance"];
+
+const matchesFilter = (item, filterId) => {
+  switch (filterId) {
+    case "motos":
+      return MOTO_BRANDS.includes(item.brand);
+    case "autos":
+      return item.tags.some((t) => AUTO_TAGS.includes(t));
+    case "camionetas":
+      return item.tags.some((t) => CAMIONETA_TAGS.includes(t));
+    case "michelin":
+      return item.brand === "MICHELIN";
+    case "pirelli":
+      return item.brand === "PIRELLI";
+    default:
+      return true;
+  }
+};
 
 const Services = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const [activeFilter, setActiveFilter] = useState("todos");
+  const carouselRef = useRef(null);
 
-  const filteredProducts = productInfo.filter((item) => {
-    const search = searchTerm.toLowerCase();
-    return (
-      item.brand.toLowerCase().includes(search) ||
-      item.model.toLowerCase().includes(search) ||
-      item.id.toLowerCase().includes(search)
-    );
-  });
+  const filteredProducts = useMemo(
+    () => productInfo.filter((item) => matchesFilter(item, activeFilter)),
+    [activeFilter]
+  );
+
+  const scrollCarousel = (direction) => {
+    const node = carouselRef.current;
+    if (!node) return;
+    const cardWidth = node.querySelector(".product-card")?.offsetWidth ?? 320;
+    node.scrollBy({ left: direction * (cardWidth + 16), behavior: "smooth" });
+  };
 
   return (
     <section className="services" id="productos">
-      <div className="container-services">
-        <h2>Venta de Neumáticos y Cubiertas para Autos, Motos y Camionetas</h2>
-        <p className="services-description">
-          En Appel Neumáticos contamos con un amplio catálogo de cubiertas para
-          todo tipo de vehículos. Elegí entre las mejores marcas para tu auto,
-          moto o camioneta.
-        </p>
+      <div className="services-shell">
 
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Buscar por marca, modelo o medida..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+        {/* Header */}
+        <div className="services-hero">
+          <span className="services-badge">Catálogo destacado</span>
+          <h2>Neumáticos para auto, moto y camioneta</h2>
+          <p className="services-description">
+            Todas las marcas, modelos y medidas. Motos de alta cilindrada, enduro,
+            autos, SUV y pickups. Consultá por WhatsApp antes de venir.
+          </p>
+          <div className="services-hashtags" aria-label="Beneficios clave">
+            <span>#WhatsApp</span>
+            <span>#ParaguayArgentina</span>
+            <span>#MarcasPremium</span>
+            <span>#EnvíosAlPaís</span>
+          </div>
         </div>
 
-        <div className="grid-productos">
-          {filteredProducts.map((item, index) => (
-            <div className="product-card" key={index}>
-              <div className="product-img">
-                <img
-                  src={item.image}
-                  alt={`${item.brand} ${item.model}`}
-                  loading="lazy"
-                />
-              </div>
-              <div className="product-info">
-                <h4 className="brand-product">{item.brand}</h4>
-                <h3 className="model-product">{item.model}</h3>
-
-                <div className="rating">
-                  <span>⭐⭐⭐⭐⭐</span>
-                  <span className="score">{item.rating}/5</span>
-                  <span className="reviews">({item.reviews})</span>
-                </div>
-
-                <div className="tags">
-                  {item.tags.map((tag, i) => (
-                    <span className="tag" key={i}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <div className="benefit">
-                  <span className="badge">Durability</span>
-                  <p>{item.benefit}</p>
-                </div>
-
-                <div className="card-buttons">
-                  <Link to={`/productos/${item.id}`} className="btn-outline">
-                    Ver detalles
-                  </Link>
-
-                  <a
-                    className="btn-yellow"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`https://wa.me/595975123030?text=Hola%20Appel%2C%20quiero%20consultar%20por%20la%20cubierta%20${encodeURIComponent(
-                      item.brand
-                    )}%20${encodeURIComponent(item.model)}`}
-                  >
-                    WhatsApp
-                  </a>
-                </div>
-              </div>
-            </div>
+        {/* Filter chips */}
+        <div className="services-filters" role="group" aria-label="Filtrar por categoría">
+          {FILTERS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`filter-chip${activeFilter === f.id ? " filter-chip--active" : ""}`}
+              onClick={() => setActiveFilter(f.id)}
+            >
+              {f.label}
+            </button>
           ))}
+        </div>
+
+        {/* Nav: count + arrows */}
+        <div className="services-nav">
+          <span className="services-count">
+            <strong>{filteredProducts.length}</strong>{" "}
+            {filteredProducts.length === 1 ? "producto" : "productos"}
+          </span>
+          <div className="carousel-arrows">
+            <button
+              type="button"
+              className="arrow-btn"
+              onClick={() => scrollCarousel(-1)}
+              aria-label="Ver productos anteriores"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              className="arrow-btn arrow-btn--next"
+              onClick={() => scrollCarousel(1)}
+              aria-label="Ver más productos"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        {/* Carousel */}
+        <div
+          className="products-carousel"
+          ref={carouselRef}
+          aria-label="Carrusel de productos"
+        >
+          {filteredProducts.length > 0 ? (
+            filteredProducts.map((item) => (
+              <article className="product-card" key={item.id}>
+                <Link to={`/productos/${item.id}`} className="product-image-link">
+                  <div className="product-img">
+                    <img
+                      src={item.image}
+                      alt={`${item.brand} ${item.model}`}
+                      loading="lazy"
+                    />
+                  </div>
+                </Link>
+
+                <div className="product-info">
+                  <div className="product-topline">
+                    <h3 className="brand-product">{item.brand}</h3>
+                    <div
+                      className="rating"
+                      aria-label={`Calificación ${item.rating} sobre 5`}
+                    >
+                      <span>★★★★★</span>
+                      <span className="score">{item.rating}/5</span>
+                      <span className="reviews">({item.reviews})</span>
+                    </div>
+                  </div>
+
+                  <h4 className="model-product">{item.model}</h4>
+
+                  <div className="tags" aria-label="Características">
+                    {item.tags.map((tag) => (
+                      <span className="tag" key={tag}>
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="benefit">
+                    <span className="badge">Recomendado</span>
+                    <p>{item.benefit}</p>
+                  </div>
+
+                  <div className="card-buttons">
+                    <Link to={`/productos/${item.id}`} className="btn-outline">
+                      Ver detalle
+                    </Link>
+                    <a
+                      className="btn-yellow"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={buildWhatsAppUrl(
+                        appelInquiryMessage(`${item.brand} ${item.model}`)
+                      )}
+                    >
+                      Pedir por WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))
+          ) : (
+            <div className="empty-state">
+              <h3>Sin productos en esta categoría</h3>
+              <p>Consultanos por WhatsApp para más opciones.</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
@@ -93,90 +188,3 @@ const Services = () => {
 };
 
 export default Services;
-
-
-// import "../../src/styles/Services.css";
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// // Cargar imágenes dinámicamente desde /images
-// //const images = import.meta.glob("../images/prod*.jpg", { eager: true });
-
-// import productInfo from "../../src/data/productInfo"
-
-// const Services = () => {
-//   //const imageArray = Object.values(images).map((img) => img.default);
-
-//   return (
-//     <section className="services" id="productos">
-//       <div className="container-services">
-//         <h2>Venta de Neumáticos y Cubiertas para Autos, Motos y Camionetas</h2>
-//         <p className="services-description">
-//           En Appel Neumáticos contamos con un amplio catálogo de cubiertas para
-//           todo tipo de vehículos. Elegí entre las mejores marcas para tu auto,
-//           moto o camioneta.
-//         </p>
-
-//         <div className="grid-productos">
-//           {productInfo.map((item, index) => (
-//             <div className="product-card" key={index}>
-//               <div className="product-img">
-//                 <img
-//                   src={item.image}
-//                   alt={`${item.brand} ${item.model}`}
-//                   loading="lazy"
-//                 />
-//               </div>
-//               <div className="product-info">
-//                 <h4 className="brand-product">{item.brand}</h4>
-//                 <h3 className="model-product">{item.model}</h3>
-
-//                 <div className="rating">
-//                   <span>⭐⭐⭐⭐⭐</span>
-//                   <span className="score">{item.rating}/5</span>
-//                   <span className="reviews">({item.reviews})</span>
-//                 </div>
-
-//                 <div className="tags">
-//                   {item.tags.map((tag, i) => (
-//                     <span className="tag" key={i}>
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </div>
-
-//                 <div className="benefit">
-//                   <span className="badge">Durability</span>
-//                   <p>{item.benefit}</p>
-//                 </div>
-
-//                 <div className="card-buttons">
-//                    <Link
-//                     to={`/productos/${item.id}`}
-//                     className="btn-outline"
-//                   >
-//                     Ver detalles
-//                   </Link>
-
-
-//                   <a
-//                     className="btn-yellow"
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     href={`https://wa.me/595975123030?text=Hola%20Appel%2C%20quiero%20consultar%20por%20la%20cubierta%20${encodeURIComponent(
-//                       item.brand
-//                     )}%20${encodeURIComponent(item.model)}`}
-//                   >
-//                    WhatsApp
-//                   </a>
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Services;

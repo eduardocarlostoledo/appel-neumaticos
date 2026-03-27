@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import "../styles/AutosCubiertas.css";
+import RouteLanding from "./RouteLanding.jsx";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const Balanceo = () => {
   useEffect(() => {
@@ -10,45 +11,40 @@ const Balanceo = () => {
   return (
     <>
       <Helmet>
-        <title>Servicio de Balanceo en Encarnación | Appel Neumáticos Showroom</title>
+        <title>Servicio de Balanceo en Encarnación | Appel Neumáticos</title>
         <meta
           name="description"
-          content="Balanceo profesional para neumáticos. Mayor confort, seguridad y vida útil para tus cubiertas. Servicio en Encarnación - Appel Neumáticos."
+          content="Balanceo para Neumáticos en Encarnacion, Paraguay. Consultas y turnos por WhatsApp."
         />
       </Helmet>
 
-      <span className="badge">Alta Tecnología en Balanceo</span>
-
-      <section className="autos-cubiertas">
-        <h1>Servicio de Balanceo</h1>
-        <p>
-          En <strong>Appel Neumáticos Showroom</strong>, realizamos el balanceo computarizado de tus neumáticos para asegurar una conducción estable, suave y segura.
-        </p>
-
-        <h2>¿Qué es el balanceo de neumáticos?</h2>
-        <p>
-          Es el proceso mediante el cual se corrigen los desequilibrios de peso en cada rueda, evitando vibraciones y desgaste prematuro de las cubiertas.
-        </p>
-
-        <h2>Beneficios del balanceo</h2>
-        <ul>
-          <li><strong>Confort:</strong> Evita vibraciones en el volante y el vehículo.</li>
-          <li><strong>Durabilidad:</strong> Mejora la vida útil de tus neumáticos.</li>
-          <li><strong>Seguridad:</strong> Reduce el riesgo de accidentes por desgaste irregular.</li>
-        </ul>
-
-        <h2>¿Cuándo realizarlo?</h2>
-        <ul>
-          <li>Al cambiar neumáticos o llantas.</li>
-          <li>Si sentís vibraciones al conducir.</li>
-          <li>Después de un golpe o impacto fuerte.</li>
-          <li>Periódicamente, como parte del mantenimiento preventivo.</li>
-        </ul>
-
-        <p>
-          Utilizamos tecnología digital y personal capacitado para brindarte el mejor servicio de balanceo en Encarnación. <strong>¡Hacé que tus neumáticos giren con precisión Appel!</strong>
-        </p>
-      </section>
+      <RouteLanding
+        badge="Servicio de balanceo"
+        title="Balanceo para mejorar confort y desgaste"
+        description="Si sentis vibracion o cambiaste cubiertas, consulta por balanceo. Confirmamos disponibilidad por WhatsApp."
+        points={["Confort", "Seguridad", "Desgaste parejo"]}
+        metrics={[
+          { value: "Menos", label: "vibracion en ruta" },
+          { value: "Mejor", label: "desgaste de cubiertas" },
+          { value: "WhatsApp", label: "consulta directa" },
+        ]}
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage("servicio de balanceo")),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Ver ubicacion",
+          href: "/#sucursales",
+        }}
+      >
+        <div className="hp-pills" aria-label="Cuando hacerlo">
+          <span>Al cambiar cubiertas</span>
+          <span>Si hay vibracion</span>
+          <span>Mantenimiento preventivo</span>
+        </div>
+      </RouteLanding>
     </>
   );
 };

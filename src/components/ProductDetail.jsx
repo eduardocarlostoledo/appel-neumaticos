@@ -1,74 +1,104 @@
-import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import productData from "../data/productData.js";
-import "../styles/ProductDetail-michelin.css";
 import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import RouteLanding from "./RouteLanding.jsx";
+import productInfo from "../data/productInfo.js";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const ProductDetail = () => {
-
-    useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  
-  const { id } = useParams();
+  const { slug } = useParams();
+  const product = productInfo.find((p) => p.id === slug);
 
-  const product = productData.find((p) => p.id === id);
+  if (!product) {
+    return (
+      <RouteLanding
+        badge="Producto no encontrado"
+        title="No encontramos la cubierta"
+        description="Podes volver al catalogo o consultar por WhatsApp."
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage("catalogo de productos")),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Volver al catalogo",
+          href: "/#productos",
+        }}
+      />
+    );
+  }
 
-  if (!product) return <p>Producto no encontrado.</p>;
+  const related = productInfo
+    .filter((item) => item.id !== product.id)
+    .slice(0, 3)
+    .map((item) => ({
+      badge: "Relacionado",
+      image: item.image,
+      title: `${item.brand} ${item.model}`,
+      copy: item.benefit,
+      cta: {
+        label: "Pedir mas informacion",
+        href: buildWhatsAppUrl(appelInquiryMessage(`${item.brand} ${item.model}`)),
+        target: "_blank",
+        rel: "noopener noreferrer",
+      },
+    }));
 
   return (
-    <motion.section
-      className="product-detail"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
-      <h1>{product.brand} {product.model}</h1>
-      <img src={product.image} alt={product.model} />
+    <>
+      <Helmet>
+        <title>{`${product.brand} ${product.model} | Appel Neumáticos`}</title>
+        <meta name="description" content={product.benefit} />
+      </Helmet>
 
-      <p><strong>Beneficio:</strong> {product.benefit}</p>
-      <p><strong>Descripción:</strong> {product.detail}</p>
-
-      {product.specifications && (
-        <table className="spec-table">
-          <tbody>
-            {Object.entries(product.specifications).map(([key, value]) => (
-              <tr key={key}>
-                <th>{key}</th>
-                <td>{value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-
-      <a
-        className="btn-yellow"
-        href={`https://wa.me/595975123030?text=Hola%20Appel%2C%20quiero%20comprar%20la%20cubierta%20${encodeURIComponent(product.brand)}%20${encodeURIComponent(product.model)}`}
-        target="_blank"
-        rel="noopener noreferrer"
+      <RouteLanding
+        badge="Detalle de producto"
+        title={`${product.brand} ${product.model}`}
+        description={product.detail}
+        points={product.tags}
+        metrics={[
+          { value: `${product.rating}/5`, label: "valoracion" },
+          { value: `${product.reviews}`, label: "consultas" },
+          { value: product.specifications?.uso || "Uso", label: "aplicacion" },
+        ]}
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage(`${product.brand} ${product.model}`)),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Volver al catalogo",
+          href: "/#productos",
+        }}
+        showcase={related}
       >
-        Consultar por WhatsApp
-      </a>
-
-      <h3 style={{ marginTop: "3rem" }}>También te puede interesar:</h3>
-      <div className="related-products">
-        {productData
-          .filter((p) => p.id !== product.id)
-          .slice(0, 3)
-          .map((related, idx) => (
-            <Link
-              key={idx}
-              to={`/productos/${related.id}`}
-              className="related-card"
-            >
-              <img src={related.image} alt={related.model} />
-              <p>{related.brand} {related.model}</p>
-            </Link>
-          ))}
-      </div>
-    </motion.section>
+        <div className="hp-card" style={{ padding: "1rem" }}>
+          <div className="hp-card-body">
+            <h2 className="hp-card-title">Especificaciones</h2>
+            <div className="hp-pills" style={{ marginTop: 0 }}>
+              {product.specifications
+                ? Object.entries(product.specifications).map(([key, value]) => (
+                    <span key={key}>
+                      {key}: {value}
+                    </span>
+                  ))
+                : null}
+            </div>
+          </div>
+        </div>
+        <div style={{ marginTop: "1rem" }}>
+          <Link to="/#productos" className="hp-btn hp-btn-secondary">
+            Ver mas productos
+          </Link>
+        </div>
+      </RouteLanding>
+    </>
   );
 };
 

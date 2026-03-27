@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import "../../src/styles/BrandsSection.css";
+import { Link } from "react-router-dom";
+import "../styles/homepage.css";
 
-// Importar logos de las marcas
 import bridgestoneLogo from "../images/logos/bridgestone.jpg";
 import dunlopLogo from "../images/logos/dunlop.png";
 import firestoneLogo from "../images/logos/firestone.png";
@@ -11,93 +11,68 @@ import pirelliLogo from "../images/logos/pirelli.png";
 import xbriLogo from "../images/logos/xbri.png";
 
 const BrandsSection = () => {
-  // Lista de marcas con logos importados
   const brands = [
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Bridgestone",
-      logo: bridgestoneLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Dunlop",
-      logo: dunlopLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Firestone",
-      logo: firestoneLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Durable",
-      logo: durableLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Michelin",
-      logo: michelinLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Pirelli",
-      logo: pirelliLogo,
-    },
-    {
-      name: "Neumatico Cubierta Appel neumatico showroom Xbri",
-      logo: xbriLogo,
-    },
+    { name: "Bridgestone", logo: bridgestoneLogo },
+    { name: "Dunlop", logo: dunlopLogo },
+    { name: "Firestone", logo: firestoneLogo },
+    { name: "Durable", logo: durableLogo },
+    { name: "Michelin", logo: michelinLogo },
+    { name: "Pirelli", logo: pirelliLogo },
+    { name: "Xbri", logo: xbriLogo },
   ];
 
-  // Animaciones
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Retraso entre cada hijo
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 },
-  };
-
   return (
-    <section className="brands-section" id="marcas">
-      <div className="container-marcas">
-        <h2>
-          En Appel Neumáticos Showroom tenemos las siguientes marcas Pirelli, Michelin, Bridgestone, Dunlop, Firestone, Durable, Xbri, Rinaldi, 
-          y más
-        </h2>
-        <p className="brands-description">
-          Trabajamos con las principales marcas de cubiertas del mundo, como
-          Michelin, Pirelli, Bridgestone, Firestone, Dunlop, Durable, y XBRI,
-          para asegurar calidad, seguridad y rendimiento.
-        </p>
+    <section className="hp-section" id="marcas">
+      <motion.div
+        className="hp-shell"
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        <div className="hp-inner">
+          <div className="hp-grid">
+            <div>
+              <span className="hp-badge">Marcas disponibles</span>
+              <h2 className="hp-title">Marcas lideres y alternativas reales</h2>
+              <p className="hp-text">
+                Pirelli, Michelin, Bridgestone, Dunlop, Firestone, Durable, XDR,
+                Brinalli y mas. Consultanos por disponibilidad y medidas.
+              </p>
+            </div>
 
-        <motion.div
-          className="brands-grid"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }} // Animación solo una vez
-        >
-          {brands.map((brand, index) => (
-            <motion.div
-              className="brand-card"
-              key={index}
-              variants={itemVariants}
-              whileHover={{ scale: 1.05 }} // Efecto hover
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <img
-                loading="lazy"
-                src={brand.logo}
-                alt={brand.name}
-                className="brand-logo"
-              />
-              {/* <p className="brand-name">{brand.name}</p> */}
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
+            <div className="hp-cta-row" style={{ marginTop: 0 }}>
+              <Link
+                to="/marcas-appel-Neumáticos-showroom"
+                className="hp-btn hp-btn-secondary"
+              >
+                Ver todas las marcas
+              </Link>
+            </div>
+          </div>
+
+          <div
+            className="hp-track cols-logos"
+            style={{ marginTop: "1.25rem", paddingBottom: "0.25rem" }}
+          >
+            {brands.map((brand) => (
+              <article className="hp-card" key={brand.name} style={{ padding: "1rem" }}>
+                <img
+                  src={brand.logo}
+                  alt={brand.name}
+                  loading="lazy"
+                  style={{
+                    width: "100%",
+                    height: "86px",
+                    objectFit: "contain",
+                    display: "block",
+                  }}
+                />
+              </article>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 };

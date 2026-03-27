@@ -1,87 +1,88 @@
-import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
-import "../../src/styles/Sucursales.css";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const Sucursales = () => {
   return (
-    <>
+    <section className="hp-section" id="sucursales">
       <Helmet>
-        <title>Ubicación de Appel Neumáticos | Encarnación Paraguay</title>
+        <title>Sucursales | Appel Neumáticos Showroom</title>
         <meta
           name="description"
-          content="Visitá Appel Neumáticos Showroom en Encarnación. A solo 300 metros de la aduana internacional. Envíos a todo Paraguay y Argentina."
+          content="Appel Neumáticos Showroom en Encarnacion, Paraguay. Rotonda Ruta Internacional a 300 m de la aduana. Consultas por WhatsApp."
         />
         <link rel="canonical" href="https://appelneumaticos.com/#sucursales" />
       </Helmet>
 
-      <section className="sucursales-section" id="sucursales">
-        <div className="container-sucursales">
-          <span className="badge">Ubicación estratégica</span>
-          <h2>¿Dónde Estamos?</h2>
+      <div className="hp-shell">
+        <div className="hp-inner">
+          <div className="hp-grid split">
+            <div>
+              <span className="hp-badge">Sucursal principal</span>
+              <h2 className="hp-title">Encarnacion, Paraguay</h2>
+              <p className="hp-text">
+                Rotonda Ruta Internacional, a 300 m de la aduana. Te atendemos
+                por WhatsApp para confirmar stock y medidas.
+              </p>
 
-          <motion.div
-            className="google-map"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            <iframe
-              title="Ubicación de Appel Neumáticos en Encarnación"
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d885.8912351549054!2d-55.851786724189196!3d-27.35806680361256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDIxJzI5LjAiUyA1NcKwNTEnMDIuMSJX!5e0!3m2!1ses!2sar!4v1742416736106!5m2!1ses!2sar"
-              width="100%"
-              height="400"
-              style={{ border: 0, borderRadius: "12px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </motion.div>
-
-          <motion.div
-            className="address-sucursales"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <h3>Visitanos o contactanos</h3>
-
-            <div className="social-links">
-              <a
-                href="https://wa.me/595975123030"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon whatsapp"
-              >
-                🟢 WhatsApp
-              </a>
-              <a
-                href="https://www.instagram.com/appel_neumaticos_showroom/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon instagram"
-              >
-                📸 Instagram
-              </a>
-              <a
-                href="https://maps.app.goo.gl/dN9obMRMWov6Euvu5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon maps"
-              >
-                📍 Google Maps
-              </a>
+              <div className="hp-cta-row">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Appel%20Neum%C3%A1ticos%20Encarnaci%C3%B3n"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hp-btn hp-btn-primary"
+                >
+                  Abrir en Google Maps
+                </a>
+                <a
+                  href={buildWhatsAppUrl(
+                    appelInquiryMessage("ubicacion y sucursales")
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hp-btn hp-btn-secondary"
+                >
+                  Consultar por WhatsApp
+                </a>
+              </div>
             </div>
 
-            <address>
-              <p>📍 J4RX+PQ9 Encarnación, Paraguay</p>
-              <p>Rotonda Ruta Internacional - 300mt de la aduana internacional</p>
-              <p>🚚 Envíos a todo Paraguay y Argentina</p>
-            </address>
-          </motion.div>
+            <div>
+              <div className="hp-metrics">
+                <div className="hp-metric">
+                  <strong>Horario</strong>
+                  <span>05:45 a 17:30</span>
+                </div>
+                <div className="hp-metric">
+                  <strong>Instagram</strong>
+                  <a
+                    href="https://www.instagram.com/appel_neumaticos_showroom/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @appel_neumaticos_showroom
+                  </a>
+                </div>
+                <div className="hp-metric">
+                  <strong>Maps</strong>
+                  <a
+                    href="https://maps.app.goo.gl/dN9obMRMWov6Euvu5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver ubicacion
+                  </a>
+                </div>
+              </div>
+              <div className="hp-pills" style={{ marginTop: "1rem" }}>
+                <span>Paraguay y Argentina</span>
+                <span>WhatsApp directo</span>
+                <span>Zona comercial</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

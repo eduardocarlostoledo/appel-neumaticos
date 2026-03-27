@@ -1,6 +1,6 @@
 Estructura del proyecto
 
-📁 appel-neumaticos
+📁 appel-Neumáticos
 ├── 📁 public
 │   └── vite.svg
 ├── 📁 src

@@ -1,0 +1,17 @@
+# Política de divulgación responsable de vulnerabilidades
+# Appel Neumáticos Showroom — appelneumaticos.com
+# Desarrollado y mantenido por Toledo Consultora IT
+# Estándar: RFC 9116 — https://www.rfc-editor.org/rfc/rfc9116
+
+Contact: mailto:info@appelneumaticos.com
+Contact: https://www.toledoconsultora.com/contacto
+
+Preferred-Languages: es, en
+
+Canonical: https://appelneumaticos.com/.well-known/security.txt
+
+Policy: https://appelneumaticos.com/security-policy
+
+Acknowledgments: https://appelneumaticos.com/security-policy#reconocimientos
+
+Expires: 2027-03-26T00:00:00Z

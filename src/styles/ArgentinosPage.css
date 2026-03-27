@@ -1,0 +1,317 @@
+.arg-page {
+  color: #e2e8f0;
+}
+
+/* ===== Hero ===== */
+.arg-hero {
+  padding: clamp(3rem, 6vw, 5rem) 1rem clamp(2rem, 4vw, 3.5rem);
+  background:
+    radial-gradient(circle at top left, rgba(15, 76, 129, 0.22), transparent 45%),
+    radial-gradient(circle at bottom right, rgba(243, 177, 11, 0.1), transparent 40%),
+    #07111f;
+  text-align: center;
+}
+
+.arg-hero-inner {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.arg-badge {
+  display: inline-block;
+  background: rgba(243, 177, 11, 0.1);
+  color: #f3b10b;
+  border: 1px solid rgba(243, 177, 11, 0.28);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+
+.arg-title {
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  font-weight: 900;
+  color: #f8fafc;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin: 0 0 1rem 0;
+}
+
+.arg-title-highlight {
+  color: #f3b10b;
+}
+
+.arg-subtitle {
+  font-size: 1.1rem;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.72;
+  max-width: 62ch;
+  margin: 0 auto 1.8rem;
+}
+
+.arg-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* ===== Buttons ===== */
+.arg-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 800;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.arg-btn:hover {
+  transform: translateY(-2px);
+}
+
+.arg-btn-wa {
+  background: linear-gradient(135deg, #25d366 0%, #1aad54 100%);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+}
+
+.arg-btn-wa:hover {
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.42);
+}
+
+.arg-btn-maps {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.arg-btn-lg {
+  font-size: 1.05rem;
+  padding: 1rem 2rem;
+}
+
+/* ===== Sections ===== */
+.arg-section {
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+}
+
+.arg-section-dark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.arg-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.arg-section-title {
+  font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+  font-weight: 900;
+  color: #f8fafc;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0 0 1.5rem 0;
+}
+
+.arg-section-desc {
+  color: rgba(226, 232, 240, 0.72);
+  font-size: 1rem;
+  line-height: 1.72;
+  margin: -0.75rem 0 1.75rem 0;
+  max-width: 65ch;
+}
+
+/* ===== Cards ventajas ===== */
+.arg-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+}
+
+.arg-card {
+  padding: 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arg-card-icon {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.arg-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.5rem 0;
+}
+
+.arg-card p {
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.68;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== Steps ===== */
+.arg-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.arg-step {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
+}
+
+.arg-step-num {
+  flex-shrink: 0;
+  width: 2.2rem;
+  height: 2.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f3b10b 0%, #d97706 100%);
+  color: #111827;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.arg-step strong {
+  display: block;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.arg-step p {
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.68;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== Brands ===== */
+.arg-brands {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.arg-brand-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.arg-brand-name {
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.arg-brand-detail {
+  color: rgba(226, 232, 240, 0.58);
+  font-size: 0.88rem;
+}
+
+/* ===== FAQ rápida ===== */
+.arg-faq {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.arg-faq-item {
+  padding: 1.2rem 1.4rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.arg-faq-q {
+  display: block;
+  color: #f8fafc;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.45rem;
+}
+
+.arg-faq-a {
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.68;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== CTA Final ===== */
+.arg-cta-final {
+  padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+  background:
+    radial-gradient(circle at top left, rgba(37, 211, 102, 0.08), transparent 50%),
+    #07111f;
+  border-top: 1px solid rgba(37, 211, 102, 0.12);
+}
+
+.arg-cta-final-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.arg-cta-final-title {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 900;
+  color: #f8fafc;
+  letter-spacing: -0.025em;
+  margin: 0 0 0.5rem 0;
+}
+
+.arg-cta-final-text {
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.68;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 640px) {
+  .arg-brands {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .arg-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .arg-cta-final-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .arg-brands {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

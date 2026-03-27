@@ -11,5 +11,9 @@ Disallow: /server-error
 # Permite todo lo demás
 Allow: /
 
-# Sitemap general (ajustá dominio si usás .ar o subdominio)
+# Sitemap general
 Sitemap: https://appelneumaticos.com/sitemap.xml
+
+# Archivo de contexto para sistemas de IA (estándar llms.txt)
+# https://llmstxt.org
+LLMs: https://appelneumaticos.com/llms.txt

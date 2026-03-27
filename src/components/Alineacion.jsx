@@ -1,47 +1,46 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import "../styles/AutosCubiertas.css";
+import RouteLanding from "./RouteLanding.jsx";
+import { appelInquiryMessage, buildWhatsAppUrl } from "../utils/whatsapp.js";
 
 const Alineacion = () => {
-     useEffect(() => {
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
-  
-  (
-    
-  <>
-    <Helmet>
-      <title>Servicio de Alineación en Encarnación | Appel Neumáticos Showroom</title>
-      <meta name="description" content="Alineación profesional para autos, camionetas y pickups. Mejora el rendimiento y la seguridad de tu vehículo con Appel Neumáticos." />
-    </Helmet>
 
-<span className="badge">Alta Tecnología en Cubiertas</span>
-    <section className="autos-cubiertas">
-      <h1>Servicio de Alineación</h1>
-      <p>
-        En <strong>Appel Neumáticos Showroom</strong>, ofrecemos un servicio de alineación de alta precisión para todo tipo de vehículos. Una correcta alineación garantiza una conducción segura, reduce el desgaste de los neumáticos y mejora la eficiencia del combustible.
-      </p>
+  return (
+    <>
+      <Helmet>
+        <title>Servicio de Alineacion en Encarnación | Appel Neumáticos</title>
+        <meta
+          name="description"
+          content="Alineacion para autos y camionetas en Encarnacion. Consultas por WhatsApp."
+        />
+      </Helmet>
 
-      <h2>¿Por qué es importante la alineación?</h2>
-      <ul>
-        <li><strong>Seguridad:</strong> Evita desviaciones y mejora el control del vehículo.</li>
-        <li><strong>Economía:</strong> Reduce el consumo de combustible y el desgaste irregular de los neumáticos.</li>
-        <li><strong>Confort:</strong> Proporciona una conducción más suave y estable.</li>
-      </ul>
-
-      <h2>¿Cuándo realizar una alineación?</h2>
-      <ul>
-        <li>Después de cambiar neumáticos o llantas.</li>
-        <li>Si el vehículo tira hacia un lado al conducir.</li>
-        <li>Tras impactos fuertes, como baches o accidentes.</li>
-        <li>Periódicamente, como parte del mantenimiento preventivo.</li>
-      </ul>
-
-      <p>
-        Nuestro equipo utiliza tecnología avanzada para asegurar una alineación precisa y eficiente. <strong>¡Confía en nosotros para mantener tu vehículo en óptimas condiciones!</strong>
-      </p>
-    </section>
-  </>
-);};
+      <RouteLanding
+        badge="Servicio de alineacion"
+        title="Alineacion para seguridad y desgaste parejo"
+        description="Si sentis que el vehiculo tira hacia un lado o cambiaste cubiertas, consulta por alineacion. Coordinamos por WhatsApp."
+        points={["Seguridad", "Desgaste parejo", "Confort"]}
+        metrics={[
+          { value: "Control", label: "mejor manejo" },
+          { value: "Consumo", label: "mas eficiente" },
+          { value: "WhatsApp", label: "consulta directa" },
+        ]}
+        ctaPrimary={{
+          label: "Pedir mas informacion",
+          href: buildWhatsAppUrl(appelInquiryMessage("servicio de alineacion")),
+          target: "_blank",
+          rel: "noopener noreferrer",
+        }}
+        ctaSecondary={{
+          label: "Ver ubicacion",
+          href: "/#sucursales",
+        }}
+      />
+    </>
+  );
+};
 
 export default Alineacion;
