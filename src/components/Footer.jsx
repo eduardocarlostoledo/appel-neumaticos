@@ -21,7 +21,7 @@ const Footer = () => {
             <Link to="/autos/cubiertas">Cubiertas para autos</Link>
             <Link to="/motos/cubiertas">Cubiertas para motos</Link>
             <Link to="/camioneta-pickup/cubiertas">Cubiertas para camionetas</Link>
-            <Link to="/marcas-appel-Neumáticos-showroom">Marcas</Link>
+            <Link to="/marcas-appel-neumaticos-showroom">Marcas</Link>
           </div>
 
           <div className="footer-column">
@@ -34,9 +34,9 @@ const Footer = () => {
 
           <div className="footer-column">
             <h4>Guias y recursos</h4>
-            <Link to="/guias">Centro de guías</Link>
+            <Link to="/guias">Centro de guias</Link>
             <Link to="/guias/como-elegir-cubierta-moto-alta-cilindrada">
-              Cómo elegir cubiertas para motos
+              Como elegir cubiertas para motos
             </Link>
             <Link to="/guias/michelin-vs-pirelli-diferencias">
               Michelin vs Pirelli
@@ -76,7 +76,7 @@ const Footer = () => {
         </div>
 
         <div className="contact-info">
-          <p>© {new Date().getFullYear()} Appel Neumáticos Showroom - Todos los derechos reservados</p>
+          <p>© {new Date().getFullYear()} Appel  Neumaticos Showroom - Todos los derechos reservados</p>
           <p>Sitio informativo con consultas centralizadas por WhatsApp.</p>
           <p>
             Desarrollado por{" "}

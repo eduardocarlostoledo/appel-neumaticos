@@ -3,13 +3,11 @@ import { appelInquiryMessage, buildWhatsAppUrl } from "../../utils/whatsapp.js";
 export const LocalSeoSection = () => (
   <section className="seo-panel seo-panel-inner" itemScope itemType="https://schema.org/AutoPartsStore">
     <div className="seo-header">
-      <span className="seo-kicker">SEO local</span>
-      <h2 className="seo-title">
-        Appel Neumáticos en Encarnacion, Paraguay
-      </h2>
+      <span className="seo-kicker">Encarnacion, Paraguay</span>
+      <h2 className="seo-title">Cubiertas con stock y asesoramiento rapido</h2>
       <p className="seo-copy" itemProp="description">
-        Ubicacion real, consulta por WhatsApp y una pagina pensada para quienes
-        buscan cubiertas desde Google o Maps antes de venir al local.
+        Escribi al WhatsApp y te pasamos opciones reales para auto, moto y camioneta.
+        Estamos en la rotonda de la ruta internacional, a 300 m de la aduana.
       </p>
     </div>
 
@@ -17,8 +15,8 @@ export const LocalSeoSection = () => (
       <div className="seo-map">
         <div className="seo-map-box">
           <p>
-            Evitamos el mapa embebido para que la pagina cargue mas rapido. El
-            acceso a la ubicacion sigue disponible en un clic.
+            Abrinos en Google Maps y llegas directo al showroom. Si sos de Paraguay
+            o Argentina, consultanos por stock antes de venir.
           </p>
           <div className="seo-map-cta">
             <a
@@ -44,26 +42,26 @@ export const LocalSeoSection = () => (
       <div className="seo-cta-grid">
         <article className="seo-mini-card">
           <strong>Encarnacion, Itapua</strong>
-          <p>Consulta local para usuarios de Paraguay y Argentina.</p>
+          <p>Rotonda ruta internacional, 300 m de la aduana.</p>
         </article>
         <article className="seo-mini-card">
-          <strong>Google y Maps</strong>
-          <p>La pagina responde a la intencion real de busqueda local.</p>
+          <strong>Atencion inmediata</strong>
+          <p>Respondemos por WhatsApp con stock y medidas.</p>
         </article>
         <article className="seo-mini-card">
           <strong>Auto, moto y camioneta</strong>
-          <p>Las categorias se entienden rapido y llevan a la conversacion.</p>
+          <p>Opciones para todo tipo de vehiculo y uso.</p>
         </article>
         <article className="seo-mini-card">
-          <strong>WhatsApp como cierre</strong>
-          <p>Todo el recorrido termina en una consulta directa desde la web.</p>
+          <strong>Paraguay y Argentina</strong>
+          <p>Enviamos a Posadas Misiones y Argentina.</p>
         </article>
       </div>
     </div>
 
     <div hidden>
       <div itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
-        <span itemProp="streetAddress">Rotonda Ruta Internacional - 300mt de la aduana internacional</span>
+        <span itemProp="streetAddress">Rotonda Ruta Internacional - 300 m de la aduana internacional</span>
         <span itemProp="addressLocality">Encarnacion</span>
         <span itemProp="addressRegion">Itapua</span>
         <span itemProp="addressCountry">Paraguay</span>

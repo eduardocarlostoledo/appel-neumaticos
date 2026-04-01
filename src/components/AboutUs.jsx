@@ -6,10 +6,10 @@ const AboutUs = () => {
   return (
     <section className="hp-section" id="acerca-de">
       <Helmet>
-        <title>Sobre Nosotros | Appel Neumáticos Showroom</title>
+        <title>Sobre Nosotros | Appel  Neumaticos Showroom</title>
         <meta
           name="description"
-          content="Appel Neumáticos Showroom en Encarnacion, Paraguay. Mas de 20.000 Neumáticos vendidos, 15 años de experiencia y cobertura nacional e internacional."
+          content="Appel  Neumaticos Showroom en Encarnacion, Paraguay. Mas de 20.000 neumaticos vendidos, 15 anos de experiencia y cobertura nacional e internacional."
         />
       </Helmet>
 
@@ -24,19 +24,17 @@ const AboutUs = () => {
           <div className="hp-grid split">
             <div>
               <span className="hp-badge">Quienes somos</span>
-              <h2 className="hp-title">
-                Lideres en venta y distribucion de Neumáticos
-              </h2>
+              <h2 className="hp-title">Lideres en venta y distribucion</h2>
               <p className="hp-text">
-                Appel Neumáticos Showroom trabaja con una variedad enorme para
+                Appel  Neumaticos Showroom trabaja con una variedad enorme para
                 auto, moto y camioneta. Somos especialistas en motos de alto
-                rendimiento, alta cilindrada y enduro. Atendemos Paraguay y
+                rendimiento, motopistera y enduro. Atendemos Paraguay y
                 Argentina con consulta directa por WhatsApp.
               </p>
 
               <div className="hp-pills">
                 <span>+20.000 vendidos</span>
-                <span>15 años de experiencia</span>
+                <span>15 anos de experiencia</span>
                 <span>Cobertura nacional e internacional</span>
               </div>
 

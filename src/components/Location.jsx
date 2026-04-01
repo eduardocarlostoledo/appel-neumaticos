@@ -9,9 +9,11 @@ const Location = () => {
           <div className="hp-grid split">
             <div>
               <span className="hp-badge">Ubicacion</span>
-              <h2 className="hp-title">Visitanos en Encarnación o consulta online</h2>
+              <h2 className="hp-title">Visitanos en Encarnacion o consulta online</h2>
               <p className="hp-text">
-                Podés encontrarnos en Google a través de nuestra ficha de Negocios o Maps buscando "Appel Neumáticos Showroom". Estamos en la rotonda de la ruta internacional, a 300 m de la aduana. Consulta por WhatsApp, tenemos todas las medidas y modelos!
+                Estamos en la rotonda de la ruta internacional, a 300 m de la
+                aduana. Si venis desde Google o Maps, consultanos por WhatsApp
+                para confirmar stock y medidas antes de venir.
               </p>
 
               <div className="hp-cta-row">

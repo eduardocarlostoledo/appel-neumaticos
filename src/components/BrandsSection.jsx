@@ -43,7 +43,7 @@ const BrandsSection = () => {
 
             <div className="hp-cta-row" style={{ marginTop: 0 }}>
               <Link
-                to="/marcas-appel-Neumáticos-showroom"
+                to="/marcas-appel-neumaticos-showroom"
                 className="hp-btn hp-btn-secondary"
               >
                 Ver todas las marcas
@@ -78,3 +78,4 @@ const BrandsSection = () => {
 };
 
 export default BrandsSection;
+

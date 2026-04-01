@@ -37,7 +37,7 @@ const AccesoriosCard = () => {
 
               <div className="hp-cta-row">
                 <a href="#productos" className="hp-btn hp-btn-primary">
-                  Ver productos
+                  Ver catalogo
                 </a>
                 <a
                   href={buildWhatsAppUrl(

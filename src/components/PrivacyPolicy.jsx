@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
         description="Este texto es generico y se puede afinar luego. El sitio se usa para brindar informacion, mostrar marcas y recibir consultas por WhatsApp."
         points={["Sitio informativo", "WhatsApp principal", "Enlaces externos"]}
         metrics={[
-          { value: "Apple", label: "Neumáticos Showroom" },
+          { value: "Appel ", label: "Neumáticos Showroom" },
           { value: "Encarnacion", label: "Paraguay" },
           { value: "WhatsApp", label: "consulta directa" },
         ]}

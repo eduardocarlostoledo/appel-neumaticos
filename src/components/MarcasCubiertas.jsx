@@ -11,12 +11,12 @@ const MarcasCubiertas = () => {
   return (
     <>
       <Helmet>
-        <title>Marcas de Neumáticos | Appel Neumáticos Showroom</title>
+        <title>Marcas de Neumaticos | Appel Neumaticos Showroom</title>
         <meta
           name="description"
-          content="Marcas de Neumáticos en Encarnacion: Pirelli, Michelin, Bridgestone, Dunlop, Firestone, Durable, XDR, Brinalli y mas."
+          content="Marcas de Neumaticos en Encarnacion: Pirelli, Michelin, Bridgestone, Dunlop, Firestone, Durable, XDR, Brinalli y mas."
         />
-        <link rel="canonical" href="https://appelneumaticos.com/marcas-appel-Neumáticos-showroom" />
+        <link rel="canonical" href="https://appelneumaticos.com/marcas-appel-neumaticos-showroom" />
       </Helmet>
 
       <RouteLanding
@@ -31,7 +31,7 @@ const MarcasCubiertas = () => {
         ]}
         ctaPrimary={{
           label: "Pedir mas informacion",
-          href: buildWhatsAppUrl(appelInquiryMessage("marcas de Neumáticos")),
+          href: buildWhatsAppUrl(appelInquiryMessage("marcas de Neumaticos")),
           target: "_blank",
           rel: "noopener noreferrer",
         }}
@@ -45,3 +45,5 @@ const MarcasCubiertas = () => {
 };
 
 export default MarcasCubiertas;
+
+

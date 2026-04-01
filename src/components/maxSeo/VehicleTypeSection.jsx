@@ -59,7 +59,7 @@ export const VehicleTypeSection = () => {
                 <Link className="seo-link seo-link-primary" to={vehicle.link}>
                   Ver categoria
                 </Link>
-                <span className="seo-link seo-link-secondary">Posicion SEO {index + 1}</span>
+                <span className="seo-link seo-link-secondary">Consulta rapida</span>
               </div>
             </div>
             <meta itemProp="position" content={index + 1} />

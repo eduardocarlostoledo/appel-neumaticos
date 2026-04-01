@@ -90,7 +90,7 @@ const App = () => {
 
           {/* Marcas */}
           <Route
-            path="/marcas-appel-Neumáticos-showroom"
+            path="/marcas-appel-neumaticos-showroom"
             element={<MarcasCubiertas />}
           />
           <Route path="/marcas/michelin" element={<MichelinPage />} />
@@ -134,3 +134,4 @@ const App = () => {
 };
 
 export default App;
+

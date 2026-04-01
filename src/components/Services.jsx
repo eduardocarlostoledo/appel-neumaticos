@@ -53,25 +53,22 @@ const Services = () => {
   return (
     <section className="services" id="productos">
       <div className="services-shell">
-
-        {/* Header */}
         <div className="services-hero">
-          <span className="services-badge">Catálogo destacado</span>
-          <h2>Neumáticos para auto, moto y camioneta</h2>
+          <span className="services-badge">Catalogo destacado</span>
+          <h2>Neumaticos para auto, moto y camioneta</h2>
           <p className="services-description">
-            Todas las marcas, modelos y medidas. Motos de alta cilindrada, enduro,
-            autos, SUV y pickups. Consultá por WhatsApp antes de venir.
+            Marcas nacionales e importadas. Motos de baja y alta cilindrada,
+            enduro y cross. Te asesoramos en minutos por WhatsApp.
           </p>
-          <div className="services-hashtags" aria-label="Beneficios clave">
-            <span>#WhatsApp</span>
-            <span>#ParaguayArgentina</span>
-            <span>#MarcasPremium</span>
-            <span>#EnvíosAlPaís</span>
+          <div className="services-pills" aria-label="Beneficios clave">
+            <span>Atencion inmediata</span>
+            <span>Precios actualizados</span>
+            <span>Stock disponible</span>
+            <span>Envios a Posadas y Argentina</span>
           </div>
         </div>
 
-        {/* Filter chips */}
-        <div className="services-filters" role="group" aria-label="Filtrar por categoría">
+        <div className="services-filters" role="group" aria-label="Filtrar por categoria">
           {FILTERS.map((f) => (
             <button
               key={f.id}
@@ -84,7 +81,6 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Nav: count + arrows */}
         <div className="services-nav">
           <span className="services-count">
             <strong>{filteredProducts.length}</strong>{" "}
@@ -103,19 +99,14 @@ const Services = () => {
               type="button"
               className="arrow-btn arrow-btn--next"
               onClick={() => scrollCarousel(1)}
-              aria-label="Ver más productos"
+              aria-label="Ver mas productos"
             >
               →
             </button>
           </div>
         </div>
 
-        {/* Carousel */}
-        <div
-          className="products-carousel"
-          ref={carouselRef}
-          aria-label="Carrusel de productos"
-        >
+        <div className="products-carousel" ref={carouselRef} aria-label="Carrusel de productos">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((item) => (
               <article className="product-card" key={item.id}>
@@ -134,7 +125,7 @@ const Services = () => {
                     <h3 className="brand-product">{item.brand}</h3>
                     <div
                       className="rating"
-                      aria-label={`Calificación ${item.rating} sobre 5`}
+                      aria-label={`Calificacion ${item.rating} sobre 5`}
                     >
                       <span>★★★★★</span>
                       <span className="score">{item.rating}/5</span>
@@ -144,7 +135,7 @@ const Services = () => {
 
                   <h4 className="model-product">{item.model}</h4>
 
-                  <div className="tags" aria-label="Características">
+                  <div className="tags" aria-label="Caracteristicas">
                     {item.tags.map((tag) => (
                       <span className="tag" key={tag}>
                         #{tag}
@@ -177,8 +168,8 @@ const Services = () => {
             ))
           ) : (
             <div className="empty-state">
-              <h3>Sin productos en esta categoría</h3>
-              <p>Consultanos por WhatsApp para más opciones.</p>
+              <h3>Sin productos en esta categoria</h3>
+              <p>Consultanos por WhatsApp para mas opciones.</p>
             </div>
           )}
         </div>

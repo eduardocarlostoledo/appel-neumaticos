@@ -19,7 +19,7 @@ const Navbar = () => {
             <img
               loading="lazy"
               src={logo}
-              alt="Appel Neumáticos Showroom Encarnacion"
+              alt="Appel  Neumaticos Showroom Encarnacion"
               className="logo-image"
             />
           </a>
@@ -27,7 +27,7 @@ const Navbar = () => {
 
         <div className="grow1">
           <div className="navbar-brand">
-            <h1 className="company-name">Appel Neumáticos</h1>
+            <h1 className="company-name">Appel  NEUMATICOS</h1>
             <h2 className="company-name-sub">SHOWROOM</h2>
           </div>
         </div>
@@ -55,7 +55,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="/marcas-appel-Neumáticos-showroom" onClick={handleLinkClick}>
+              <Link to="/marcas-appel-neumaticos-showroom" onClick={handleLinkClick}>
                 Marcas
               </Link>
             </li>
@@ -82,8 +82,6 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-
-          <div className="navbar-contact"></div>
 
           <button
             type="button"

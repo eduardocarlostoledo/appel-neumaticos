@@ -6,11 +6,11 @@ export const PricingSection = () => (
     <div className="seo-header">
       <span className="seo-kicker">Consulta y stock</span>
       <h2 className="seo-title" itemProp="name">
-        Informacion clara para pedir stock y comparar medidas
+        Escribi al WhatsApp y te enviamos informacion del amplio stock y variedad
       </h2>
       <p className="seo-copy">
-        Appel Neumáticos Showroom vende por WhatsApp. Mostramos lo necesario
-        para decidir rapido y cerrar consulta.
+        Appel Neumaticos Showroom estamos en Instagram, Tik Tok, tenemos variedad
+        de precios, modelos y disenos. Enviamos a Posadas Misiones y Argentina.
       </p>
     </div>
 
